@@ -18,8 +18,8 @@ export default function Partners() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-5">
           {/* Badge */}
-          <div className="inline-flex items-center gap-1.5 bg-[#0A0A0C] border border-amber-500/30 rounded-full px-4.5 py-1.5 text-[10px] font-black text-amber-500 uppercase tracking-widest mx-auto">
-            <span className="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>
+          <div className="inline-flex items-center gap-1.5 bg-[#0A0A0C] border border-gold rounded-full px-4.5 py-1.5 text-[10px] font-black text-gold uppercase tracking-widest mx-auto">
+            <span className="w-1.5 h-1.5 bg-gold rounded-full"></span>
             COLLABORATION
           </div>
           <h2 className="text-4xl font-black text-white tracking-tight font-outfit leading-tight">
