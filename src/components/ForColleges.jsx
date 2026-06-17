@@ -41,7 +41,7 @@ export default function ForColleges() {
           {/* Left Column: Heading and CTA */}
           <div className="w-full lg:w-5/12 flex flex-col items-start text-left space-y-6 lg:sticky lg:top-24">
             {/* FOR COLLEGES Badge */}
-            <div className="inline-flex items-center gap-1.5 bg-[#0A0A0C] border border-[#E5B133] rounded-full px-4.5 py-1.5 text-[10px] font-black text-[#E5B133] uppercase tracking-widest">
+            <div className="inline-flex items-center gap-1.5 bg-[radial-gradient(circle_at_center,#15130d_100%,#07080b_100%,#020304_100%)] pointer-events-none border border-gold/30 rounded-full px-10 py-4 text-[15px] font-black text-[#F3BA26] uppercase tracking-widest">
               <span className="w-1.5 h-1.5 bg-[#E5B133] rounded-full animate-pulse"></span>
               FOR COLLEGES
             </div>
@@ -50,11 +50,11 @@ export default function ForColleges() {
               Build Industry-Ready Talent
             </h2>
             
-            <p className="text-sm sm:text-base text-slate-400 leading-relaxed font-medium">
+            <p className="text-sm sm:text-base text-white leading-relaxed font-medium">
               Partner with us to bring industry-grade learning, mentorship and placement infrastructure directly to your campus.
             </p>
 
-            <button className="inline-flex items-center gap-2 bg-gold hover:bg-gold/80 text-[#080706] font-extrabold text-sm px-6 py-3.5 rounded-full transition-all duration-300 shadow-[0_4px_25px_rgba(229,193,88,0.25)] hover:scale-105 active:scale-95 group">
+            <button className="inline-flex items-center gap-2 bg-gold hover:bg-gold/80 text-[#080706] font-bold text-md px-6 py-3.5 rounded-full transition-all duration-300 shadow-[0_4px_25px_rgba(229,193,88,0.25)] hover:scale-105 active:scale-95 group">
               Become a Partner College
               <span className="font-black transition-transform duration-300 group-hover:translate-x-1">→</span>
             </button>
@@ -77,7 +77,7 @@ export default function ForColleges() {
                   <h3 className="text-white font-extrabold text-sm md:text-base font-outfit group-hover:text-gold transition-colors duration-300">
                     {point.title}
                   </h3>
-                  <p className="text-slate-400 text-xs md:text-sm font-medium mt-1">
+                  <p className="text-white text-xs md:text-sm font-medium mt-1">
                     {point.desc}
                   </p>
                 </div>

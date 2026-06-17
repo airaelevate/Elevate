@@ -26,7 +26,7 @@ export default function Hero({ onGetStarted }) {
             </h1>
  
             {/* Description */}
-            <p className="text-sm sm:text-base md:text-lg text-slate-400 max-w-xl leading-relaxed font-medium">
+            <p className="text-sm sm:text-base md:text-lg text-white max-w-xl leading-relaxed font-medium">
               Transform your potential into professional success through industry-focused learning, expert mentorship, hands-on projects, internships, and career opportunities.
             </p>
  

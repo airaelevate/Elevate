@@ -81,9 +81,6 @@ export default function Ecosystem() {
   return (
     <section id="ecosystem" className="py-10 border-t border-white/5 bg-[#07080C] relative overflow-hidden px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
       {/* Decorative Radial Background Lights */}
-      <div className="absolute top-[20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-indigo-500/5 blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-[10%] right-[-10%] w-[400px] h-[400px] rounded-full bg-purple-500/5 blur-[100px] pointer-events-none" />
-      
       <div className="max-w-6xl mx-auto w-full relative z-10">
         
         {/* ── SECTION HEADER WITH SLOW PREMIUM ENTRY ── */}
@@ -95,7 +92,7 @@ export default function Ecosystem() {
           className="text-center max-w-4xl mx-auto mb-10 space-y-5"
         >
           {/* Section Indicator Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#07080C] border border-gold/10 rounded-full px-5 py-2 text-[10px] font-bold text-gold uppercase tracking-widest mx-auto shadow-inner">
+          <div className="inline-flex items-center  gap-1.5 bg-[radial-gradient(circle_at_center,#15130d_100%,#07080b_100%,#020304_100%)] pointer-events-none border border-gold/30 rounded-full px-10 py-4 text-[15px] font-black text-[#F3BA26] uppercase tracking-widest mx-auto">
             <span className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse" />
             WHY ELEVATE
           </div>
@@ -103,7 +100,7 @@ export default function Ecosystem() {
           <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
             An ecosystem, not a course catalog
           </h2>
-          <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl mx-auto font-medium">
+          <p className="text-sm sm:text-base text-white leading-relaxed max-w-2xl mx-auto font-medium">
             Six interlocking layers that compound — learning that leads to projects, mentorship that leads to internships, internships that lead to placements.
           </p>
         </motion.div>
@@ -127,7 +124,7 @@ export default function Ecosystem() {
                   {layer.title}
                 </h3>
                 
-                <p className="text-sm text-slate-400 leading-relaxed font-medium">
+                <p className="text-sm text-[#f8f8f8] leading-relaxed font-medium">
                   {layer.desc}
                 </p>
               </div>

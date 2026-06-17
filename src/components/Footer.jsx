@@ -94,8 +94,8 @@ export default function Footer() {
               </a> */}
 
               {/* Instagram */}
-              {/* <a 
-                href="#" 
+               { <a 
+                href="https://www.instagram.com/aira.elevate?igsh=cjQweWM4aWVod2kw" 
                 target="_blank" 
                 rel="noreferrer"
                 className="w-9 h-9 rounded-full border border-white/10 bg-white/[0.02] hover:border-[#F5B91B] hover:text-[#F5B91B] flex items-center justify-center text-zinc-400 transition-colors duration-300 shadow-sm"
@@ -106,8 +106,8 @@ export default function Footer() {
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                 </svg>
-              </a> */}
-
+              </a>
+ }
               {/* YouTube */}
               {/* <a 
                 href="#" 

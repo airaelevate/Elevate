@@ -46,7 +46,7 @@ export default function ForStudents() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-5 flex flex-col items-center">
           {/* FOR STUDENTS Badge */}
-          <div className="inline-flex items-center gap-1.5 bg-[#07080C] border border-gold/30 rounded-full px-4.5 py-1.5 text-[10px] font-black text-gold uppercase tracking-widest mx-auto">
+          <div className="inline-flex items-center  gap-1.5 bg-[radial-gradient(circle_at_center,#15130d_100%,#07080b_100%,#020304_100%)] pointer-events-none border border-gold/30 rounded-full px-10 py-4 text-[15px] font-black text-[#F3BA26] uppercase tracking-widest mx-auto">
             <span className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse"></span>
             FOR STUDENTS
           </div>

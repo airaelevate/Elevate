@@ -64,14 +64,14 @@ export default function JourneyTimeline() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-24 space-y-4">
-          <div className="inline-flex items-center gap-2 bg-[#F5C143]/10 border border-[#F5C143]/20 rounded-full px-4 py-1.5 text-[11px] font-bold text-[#F5C143] uppercase tracking-widest mx-auto">
+          <div className="inline-flex items-center  gap-1.5 bg-[radial-gradient(circle_at_center,#15130d_100%,#07080b_100%,#020304_100%)] pointer-events-none border border-gold/30 rounded-full px-10 py-4 text-[15px] font-black text-[#F3BA26] uppercase tracking-widest mx-auto">
             <span className="w-1.5 h-1.5 bg-[#F5C143] rounded-full animate-pulse" />
             THE JOURNEY
           </div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight font-outfit">
             Elevate Journey
           </h2>
-          <p className="text-sm sm:text-base text-zinc-400 max-w-xl mx-auto font-medium">
+          <p className="text-sm sm:text-base text-white max-w-xl mx-auto font-medium">
             A continuous pathway from your first lesson to your first paycheck.
           </p>
         </div>

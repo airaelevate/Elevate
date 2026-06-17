@@ -36,16 +36,16 @@ export default function Stories() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16 space-y-5">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-5">
           {/* Badge */}
-          <div className="inline-flex items-center gap-1.5 bg-[#07080C] border border-[#f0c050] rounded-full px-4.5 py-1.5 text-[10px] font-black text-[#f0c050] uppercase tracking-widest mx-auto">
+          <div className="inline-flex items-center  gap-1.5 bg-[radial-gradient(circle_at_center,#15130d_100%,#07080b_100%,#020304_100%)] pointer-events-none border border-gold/30 rounded-full px-10 py-4 text-[15px] font-black text-[#F3BA26] uppercase tracking-widest mx-auto">
             <span className="w-1.5 h-1.5 bg-[#f0c050] rounded-full"></span>
             SUCCESS STORIES
           </div>
-          <h2 className="text-5xl font-bold font-black text-white tracking-tight font-outfit leading-tight">
+          <h2 className="text-6xl font-bold font-black text-white tracking-tight font-outfit leading-tight">
             Success Stories That Inspire
           </h2>
-          <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-white leading-relaxed max-w-2xl mx-auto">
             Learners who walked the pathway — from first lesson to first offer.
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function Stories() {
                   ))}
                 </div>
 
-                <p className="text-sm md:text-base text-slate-300 leading-relaxed font-semibold">
+                <p className="text-sm md:text-base text-white leading-relaxed font-semibold">
                   "{story.text}"
                 </p>
               </div>
@@ -84,8 +84,8 @@ export default function Stories() {
                   <h4 className="text-sm font-bold text-white font-outfit">
                     {story.author}
                   </h4>
-                  <p className="text-[11px] text-slate-400 leading-tight">
-                    {story.role} · <strong className="text-slate-300 font-bold">{story.company}</strong>
+                  <p className="text-[11px] text-white leading-tight">
+                    {story.role} · <strong className="text-white font-bold">{story.company}</strong>
                   </p>
                 </div>
               </div>

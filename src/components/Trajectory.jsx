@@ -27,7 +27,7 @@ export default function Trajectory() {
         {/* Section Header */}
         <div className="text-center max-w-4xl mx-auto mb-16 space-y-5">
           {/* THE PROBLEM Badge */}
-          <div className="inline-flex items-center  gap-1.5 bg-gold-300 border border-gold/30 rounded-full px-5 py-3 text-[10px] font-black text-gold uppercase tracking-widest mx-auto">
+          <div className="inline-flex items-center  gap-1.5 bg-[radial-gradient(circle_at_center,#15130d_100%,#07080b_100%,#020304_100%)] pointer-events-none border border-gold/30 rounded-full px-10 py-4 text-[15px] font-black text-[#F3BA26] uppercase tracking-widest mx-auto">
             <span className="w-2 h-2 bg-gold  rounded-full"></span>
             THE PROBLEM
           </div>
@@ -35,7 +35,7 @@ export default function Trajectory() {
           <h2 className="text-4xl sm:text-5xl font-bold font-black text-white tracking-tight font-outfit leading-tight">
             Most Learning Platforms Stop at Certificates
           </h2>
-          <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-white leading-relaxed max-w-2xl mx-auto">
             A certificate doesn't get you hired. Industry teams hire for proof — projects shipped, problems solved, mentors who vouch. That's the gap most EdTech leaves wide open.
           </p>
         </div>
@@ -46,17 +46,17 @@ export default function Trajectory() {
           <div className="absolute top-10 bottom-10 w-0.5 bg-white/5 z-0" />
 
           {/* Pill 1: Courses */}
-          <div className="w-80 bg-[#0E0E11] border border-white/5 rounded-full py-3.5 text-center text-xs font-bold text-slate-400 z-10 shadow-lg mb-6">
+          <div className="w-120 bg-[#0E0E11] border border-white/5 rounded-full  py-3.5 text-center text-lg font-bold text-[#F8F8F8] z-10 shadow-lg mb-6">
             Courses
           </div>
 
           {/* Pill 2: Certificates */}
-          <div className="w-80 bg-[#0E0E11] border border-white/5 rounded-full py-3.5 text-center text-xs font-bold text-slate-400 z-10 shadow-lg mb-6">
+          <div className="w-120 bg-[#0E0E11] border border-white/5 rounded-full  py-3.5 text-center text-lg font-bold text-[#F8F8F8] z-10 shadow-lg mb-6">
             Certificates
           </div>
 
           {/* Pill 3: No career continuity */}
-          <div className="w-80 bg-[#0B0B0B] border border-white/5 rounded-full py-3.5 text-center text-xs font-bold text-red-500 z-10 shadow-l hover:border-red-400 ">
+          <div className="w-120 bg-[#0E0E11] border border-white/5 rounded-full  py-3.5 text-center text-lg font-bold text-[#F8F8F8] z-10 shadow-lg mb-6">
             No career continuity
           </div>
         </div>
@@ -68,7 +68,7 @@ export default function Trajectory() {
           <div className="rounded-[24px] p-8 md:p-10 bg-[#0C0B0A]/90 border border-red-500/10 hover:border-red-500/30 hover:bg-[#120B0B]/90 transition-all duration-300 relative overflow-hidden text-left shadow-[0_8px_30px_rgb(0,0,0,0.8)] group">
             <div className="space-y-6">
               <div>
-                <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">
+                <span className="text-[14px] font-black text-white uppercase tracking-widest">
                   TRADITIONAL LEARNING
                 </span>
                 <h3 className="text-2xl font-black text-white font-outfit mt-1">
@@ -82,7 +82,7 @@ export default function Trajectory() {
                     <div className="w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center text-red-500/70 flex-shrink-0">
                       <X className="w-3.5 h-3.5" />
                     </div>
-                    <span className="text-sm text-slate-400 leading-relaxed font-semibold">
+                    <span className="text-sm text-white leading-relaxed font-semibold">
                       {item}
                     </span>
                   </li>
@@ -94,13 +94,13 @@ export default function Trajectory() {
           {/* Right Card: Continues till employed */}
           <div className="rounded-[24px] p-8 md:p-10 bg-[#0C0B0A]/90 border border-gold/15 hover:border-gold/30 hover:bg-[#12100F]/90 transition-all duration-300 relative overflow-hidden text-left shadow-[0_8px_30px_rgb(0,0,0,0.8)] group">
             {/* ELEVATE WAY Badge */}
-            <div className="absolute top-8 right-8 bg-gold text-black font-extrabold text-[10px] tracking-wider uppercase px-4 py-1.5 rounded-full">
+            <div className="absolute top-8 right-8 bg-gold text-black font-extrabold text-[14px] tracking-wider uppercase px-4 py-1.5 rounded-full">
               ELEVATE WAY
             </div>
 
             <div className="space-y-6">
               <div>
-                <span className="text-[10px] font-black text-gold uppercase tracking-widest">
+                <span className="text-[14px] font-black text-gold uppercase tracking-widest">
                   ELEVATE
                 </span>
                 <h3 className="text-2xl font-black text-white font-outfit mt-1">
@@ -114,7 +114,7 @@ export default function Trajectory() {
                     <div className="w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center text-gold flex-shrink-0">
                       <Check className="w-3.5 h-3.5" />
                     </div>
-                    <span className="text-sm text-slate-300 leading-relaxed font-bold">
+                    <span className="text-sm text-white leading-relaxed font-bold">
                       {item}
                     </span>
                   </li>
