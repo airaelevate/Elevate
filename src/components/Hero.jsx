@@ -30,23 +30,25 @@ export default function Hero({ onGetStarted }) {
               Transform your potential into professional success through industry-focused learning, expert mentorship, hands-on projects, internships, and career opportunities.
             </p>
  
-            {/* Action Buttons - exactly as screenshot */}
+            {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <button
                 onClick={(e) => {
                   e.preventDefault();
                   onGetStarted();
                 }}
-                className="inline-flex items-center justify-center gap-1.5 bg-gold hover:bg-gold/90 text-black font-extrabold px-6 py-3 rounded-full transition-all duration-200 "
+                className="group inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold/90 text-black font-extrabold px-6 py-3 rounded-full transition-all duration-200"
               >
-                Get Started &rarr;
+                Get Started
+                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
               </button>
               
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-1.5 border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 text-white font-extrabold px-6 py-3 rounded-full transition-all duration-200 text-sm"
+                className="group inline-flex items-center justify-center gap-2 border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 text-white font-extrabold px-6 py-3 rounded-full transition-all duration-200 text-sm"
               >
-                Partner With Us &nearrow;
+                Partner with us
+                <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </div>
 
@@ -108,7 +110,7 @@ export default function Hero({ onGetStarted }) {
                       <Code className="w-4 h-4 text-gold" strokeWidth={2.2} />
                     </div>
                     <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 whitespace-nowrap">
-                      <div className="inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10px] font-semibold tracking-wide border backdrop-blur-sm bg-surface/80 text-foreground/90 border-border/60 font-sans font-sans">Projects</div>
+                      <div className="inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10px] font-semibold tracking-wide border backdrop-blur-sm bg-surface/80 text-foreground/90 border-border/60 font-sans">Projects</div>
                     </div>
                   </div>
 
@@ -128,7 +130,7 @@ export default function Hero({ onGetStarted }) {
                       <Briefcase className="w-4 h-4 text-gold" strokeWidth={2.2} />
                     </div>
                     <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 whitespace-nowrap">
-                      <div className="inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10px] font-semibold tracking-wide border backdrop-blur-sm bg-surface/80 text-foreground/90 border-border/60 font-sans font-sans font-sans">Internships</div>
+                      <div className="inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10px] font-semibold tracking-wide border backdrop-blur-sm bg-surface/80 text-foreground/90 border-border/60 font-sans">Internships</div>
                     </div>
                   </div>
 
