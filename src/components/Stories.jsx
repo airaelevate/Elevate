@@ -30,19 +30,19 @@ export default function Stories() {
   ];
 
   return (
-    <section id="stories" className="py-24 border-t border-white/5 bg-[#050506]/20 relative">
+    <section id="stories" className="py-14 border-t border-white/5 bg-[#07080C] relative">
       <div className="absolute top-[30%] right-[-10%] w-[350px] h-[350px] rounded-full radial-glow-gold opacity-5 blur-[85px]" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-5">
+        <div className="text-center max-w-4xl mx-auto mb-16 space-y-5">
           {/* Badge */}
-          <div className="inline-flex items-center gap-1.5 bg-[#0A0A0C] border border-amber-500/30 rounded-full px-4.5 py-1.5 text-[10px] font-black text-amber-500 uppercase tracking-widest mx-auto">
-            <span className="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>
+          <div className="inline-flex items-center gap-1.5 bg-[#07080C] border border-[#f0c050] rounded-full px-4.5 py-1.5 text-[10px] font-black text-[#f0c050] uppercase tracking-widest mx-auto">
+            <span className="w-1.5 h-1.5 bg-[#f0c050] rounded-full"></span>
             SUCCESS STORIES
           </div>
-          <h2 className="text-4xl font-black text-white tracking-tight font-outfit leading-tight">
+          <h2 className="text-5xl font-bold font-black text-white tracking-tight font-outfit leading-tight">
             Success Stories That Inspire
           </h2>
           <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl mx-auto">

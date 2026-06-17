@@ -26,7 +26,7 @@ export default function ForCompanies() {
   ];
 
   return (
-    <section id="companies" className="py-24 border-t border-white/5 bg-[#050506]/10 relative overflow-hidden px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
+    <section id="companies" className="py-14 border-t border-white/5 bg-[#07080C]/10 relative overflow-hidden px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
       {/* Decorative radial glows */}
       <div className="absolute top-[30%] right-[-10%] w-[350px] h-[350px] rounded-full radial-glow-gold opacity-5 blur-[90px] pointer-events-none" />
       <div className="absolute bottom-[20%] left-[-10%] w-[350px] h-[350px] rounded-full radial-glow-gold opacity-5 blur-[90px] pointer-events-none" />
@@ -40,7 +40,7 @@ export default function ForCompanies() {
             FOR COMPANIES
           </div>
 
-          <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight font-outfit leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-bold font-black text-white tracking-tight font-outfit leading-tight">
             Access Emerging Talent
           </h2>
           <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl mx-auto font-medium">

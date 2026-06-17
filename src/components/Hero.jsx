@@ -3,7 +3,7 @@ import { ArrowRight, ArrowUpRight, BookOpen, Code, UserCheck, Briefcase, Target,
 
 export default function Hero({ onGetStarted }) {
   return (
-    <section id="home" className="relative min-h-screen bg-[#0B0B0B] flex items-center justify-center pt-44 pb-16 overflow-hidden">
+    <section id="home" className="relative min-h-screen bg-[#07080C] flex items-center justify-center pt-44 pb-16 overflow-hidden">
       
       {/* Cosmic background grid & gold radial glow */}
       <div className="absolute inset-0 z-0 pointer-events-none">

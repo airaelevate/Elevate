@@ -19,20 +19,20 @@ export default function Trajectory() {
   ];
 
   return (
-    <section id="trajectory" className="py-24 border-t border-white/5 bg-[#0B0B0B] relative">
+    <section id="trajectory" className="py-10 border-t border-white/5 bg-[##07080C] relative">
       <div className="absolute top-[20%] right-[-10%] w-[300px] h-[300px] rounded-full radial-glow-gold opacity-5 blur-[80px]" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-5">
+        <div className="text-center max-w-4xl mx-auto mb-16 space-y-5">
           {/* THE PROBLEM Badge */}
-          <div className="inline-flex items-center gap-1.5 bg-gold-300 border border-gold/30 rounded-full px-5 py-3 text-[10px] font-black text-gold uppercase tracking-widest mx-auto">
-            <span className="w-2 h-2 bg-gold rounded-full"></span>
+          <div className="inline-flex items-center  gap-1.5 bg-gold-300 border border-gold/30 rounded-full px-5 py-3 text-[10px] font-black text-gold uppercase tracking-widest mx-auto">
+            <span className="w-2 h-2 bg-gold  rounded-full"></span>
             THE PROBLEM
           </div>
 
-          <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight font-outfit leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-bold font-black text-white tracking-tight font-outfit leading-tight">
             Most Learning Platforms Stop at Certificates
           </h2>
           <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl mx-auto">

@@ -42,20 +42,20 @@ export default function Programs() {
   ];
 
   return (
-    <section id="programs" className="py-24 border-t border-white/5 bg-[#0B0B0B] relative">
+    <section id="programs" className="py-14 border-t border-white/5 bg-[#07080C] relative">
       <div className="absolute bottom-[-10%] right-[-10%] w-[350px] h-[350px] rounded-full radial-glow-gold opacity-5 blur-[90px]" />
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-5">
+        <div className="text-center max-w-4xl mx-auto mb-10 space-y-5">
           {/* LEARNING PROGRAMS Badge */}
-          <div className="inline-flex items-center gap-1.5 bg-[#0B0B0B] border border-gold/30  hover:shadow- rounded-full px-4.5 py-1.5 text-[10px] font-black text-gold uppercase tracking-widest mx-auto">
+          <div className="inline-flex items-center gap-1.5 bg-[#07080C] border border-gold/30  hover:shadow- rounded-full px-4.5 py-1.5 text-[10px] font-black text-gold uppercase tracking-widest mx-auto">
             <span className="w-1.5 h-1.5 bg-gold rounded-full"></span>
             LEARNING PROGRAMS
           </div>
 
-          <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight font-outfit leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-bold font-black text-white tracking-tight font-outfit leading-tight">
             Tracks built for the industry's next decade
           </h2>
           <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl mx-auto">
@@ -70,7 +70,7 @@ export default function Programs() {
             return (
               <div
                 key={idx}
-                className="rounded-[24px] p-8 flex flex-col text-left group hover:scale-[1.01] bg-[#0C0B0A]/90 border border-gold/10 hover:border-gold/30 hover:bg-[#12100F]/90 hover:shadow-lg hover:shadow-gold/40 transition-all duration-300 relative shadow-[0_8px_30px_rgb(0,0,0,0.8)]"
+                className="rounded-[24px] p-8 flex flex-col text-left group hover:scale-[1.05] bg-[#07080C] border border-gold/10 hover:border-gold/30 hover:bg-[#07080C] hover:shadow-md hover:shadow-gold/40 transition-all duration-300 relative shadow-[0_8px_30px_rgb(0,0,0,0.8)]"
               >
                 {/* Duration Badge - top right of card */}
                 <div className="absolute top-8 right-8 bg-[#1A1613] text-[10px] font-bold text-gold/80 px-3 py-1 rounded-full border border-gold/20">
@@ -91,13 +91,13 @@ export default function Programs() {
                 </p>
 
                 {/* Explore link */}
-                <a
+                {/* <a
                   href="#contact"
                   className="inline-flex items-center gap-1.5 text-sm font-bold text-gold hover:text-gold/80 transition-colors duration-200"
                 >
                   Explore Program
                   <ArrowRight className="w-4 h-4 ml-0.5" />
-                </a>
+                </a> */}
               </div>
             );
           })}

@@ -30,7 +30,7 @@ export default function ForColleges() {
   ];
 
   return (
-    <section id="colleges" className="py-24 border-t border-white/5 bg-[#08090D] relative overflow-hidden px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
+    <section id="colleges" className="py-14 border-t border-white/5 bg-[#07080C] relative overflow-hidden px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
       {/* Decorative radial glows */}
       <div className="absolute top-[20%] left-[-15%] w-[400px] h-[400px] rounded-full radial-glow-gold opacity-5 blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[30%] right-[-15%] w-[400px] h-[400px] rounded-full radial-glow-gold opacity-5 blur-[100px] pointer-events-none" />
@@ -41,12 +41,12 @@ export default function ForColleges() {
           {/* Left Column: Heading and CTA */}
           <div className="w-full lg:w-5/12 flex flex-col items-start text-left space-y-6 lg:sticky lg:top-24">
             {/* FOR COLLEGES Badge */}
-            <div className="inline-flex items-center gap-1.5 bg-[#0A0A0C] border border-amber-500/30 rounded-full px-4.5 py-1.5 text-[10px] font-black text-amber-500 uppercase tracking-widest">
-              <span className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-pulse"></span>
+            <div className="inline-flex items-center gap-1.5 bg-[#0A0A0C] border border-[#E5B133] rounded-full px-4.5 py-1.5 text-[10px] font-black text-[#E5B133] uppercase tracking-widest">
+              <span className="w-1.5 h-1.5 bg-[#E5B133] rounded-full animate-pulse"></span>
               FOR COLLEGES
             </div>
 
-            <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tight font-outfit leading-tight">
+            <h2 className="text-4xl sm:text-5xl font-bold font-black text-white tracking-tight font-outfit leading-tight">
               Build Industry-Ready Talent
             </h2>
             

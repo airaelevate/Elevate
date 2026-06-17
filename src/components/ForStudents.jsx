@@ -37,7 +37,7 @@ export default function ForStudents() {
   ];
 
   return (
-    <section id="students" className="py-24 border-t border-white/5 bg-[#0B0B0B]/10 relative overflow-hidden px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
+    <section id="students" className="py-14 border-t border-white/5 bg-[#07080C] relative overflow-hidden px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
       {/* Decorative radial glows */}
       <div className="absolute top-[40%] right-[-10%] w-[350px] h-[350px] rounded-full radial-glow-gold opacity-5 blur-[90px] pointer-events-none" />
       <div className="absolute bottom-[20%] left-[-10%] w-[350px] h-[350px] rounded-full radial-glow-gold opacity-5 blur-[90px] pointer-events-none" />
@@ -46,7 +46,7 @@ export default function ForStudents() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-5 flex flex-col items-center">
           {/* FOR STUDENTS Badge */}
-          <div className="inline-flex items-center gap-1.5 bg-[#0B0B0B] border border-gold/30 rounded-full px-4.5 py-1.5 text-[10px] font-black text-gold uppercase tracking-widest mx-auto">
+          <div className="inline-flex items-center gap-1.5 bg-[#07080C] border border-gold/30 rounded-full px-4.5 py-1.5 text-[10px] font-black text-gold uppercase tracking-widest mx-auto">
             <span className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse"></span>
             FOR STUDENTS
           </div>

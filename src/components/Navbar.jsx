@@ -13,16 +13,19 @@ export default function Navbar({ onGetStarted }) {
   ];
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[min(1200px,94vw)]">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 bg-[#07080C]  z-50 w-[min(1300px,94vw)]">
       <nav className="glass-card rounded-full px-5 py-1.5 md:py-2.5 flex items-center justify-between shadow-[0_10px_40px_-20px_rgba(0,0,0,0.6)]">
+        <div className="">
         {/* Brand Logo - Base64 Image */}
-        <a href="#home" className="flex items-center pl-1">
+        <a href="#home" className="flex items-center ">
           <img
             src={logo}
             alt="Elevate Logo"
-            className="h-10 md:h-12 w-auto"
+            className="h-10 md:h-12 w-auto px-3"
           />
         </a>
+        </div>
+        
 
         {/* Desktop Links */}
         <ul className="hidden md:flex items-center gap-9 text-[1rem] font-semibold text-foreground/90 tracking-wide">

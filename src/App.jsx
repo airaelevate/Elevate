@@ -8,7 +8,6 @@ import ForColleges from "./components/ForColleges";
 import ForCompanies from "./components/ForCompanies";
 import Journey from "./components/Journey";
 import Programs from "./components/Programs";
-import Partners from "./components/Partners";
 import Stories from "./components/Stories";
 import Footer from "./components/Footer";
 import ClickSpark from "./components/ClickSpark";
@@ -41,12 +40,11 @@ export default function App() {
       <Hero onGetStarted={() => setIsEnquiryOpen(true)} />
       <Trajectory />
       <Ecosystem />
+      <Journey />
+      <Programs />
       <ForStudents />
       <ForColleges />
       <ForCompanies />
-      <Journey />
-      <Programs />
-      <Partners />
       <Stories />
 
       {/* Footer & Contact */}

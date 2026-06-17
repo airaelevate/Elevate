@@ -98,12 +98,12 @@ export default function StudentEnquiryModal({ isOpen, onClose }) {
 
   return (
     <div 
-      className="fixed inset-0 z-[999999] flex items-center justify-center p-4 bg-[#0d111a]/80 backdrop-blur-md transition-opacity duration-500 animate-fadeIn"
+      className="fixed inset-0 z-[999999] flex items-center justify-center p-4 bg-[#07080C]/80 backdrop-blur-md transition-opacity duration-500 animate-fadeIn"
       onClick={onClose}
     >
       {/* Main Modal Card */}
       <div 
-        className="relative max-w-4xl w-full flex flex-col md:flex-row bg-[#1a1f2b] rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(212,175,55,0.15)] border border-[#d4af37]/20 transition-all duration-300 transform scale-100"
+        className="relative max-w-4xl w-full flex flex-col md:flex-row bg-[#07080C] rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(212,175,55,0.15)] border border-[#d4af37]/20 transition-all duration-300 transform scale-100"
         onClick={(e) => e.stopPropagation()}
       >
         

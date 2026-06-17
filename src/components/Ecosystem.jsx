@@ -79,7 +79,7 @@ export default function Ecosystem() {
   const isHeaderInView = useInView(headerRef, { once: true, threshold: 0.1 });
 
   return (
-    <section id="ecosystem" className="py-24 border-t border-white/5 bg-[#0B0B0B] relative overflow-hidden px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
+    <section id="ecosystem" className="py-10 border-t border-white/5 bg-[#07080C] relative overflow-hidden px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
       {/* Decorative Radial Background Lights */}
       <div className="absolute top-[20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-indigo-500/5 blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[10%] right-[-10%] w-[400px] h-[400px] rounded-full bg-purple-500/5 blur-[100px] pointer-events-none" />
@@ -92,15 +92,15 @@ export default function Ecosystem() {
           initial={{ opacity: 0, y: -30 }}
           animate={isHeaderInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center max-w-3xl mx-auto mb-20 space-y-5"
+          className="text-center max-w-4xl mx-auto mb-10 space-y-5"
         >
           {/* Section Indicator Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#0B0B0B] border border-gold/10 rounded-full px-5 py-2 text-[10px] font-bold text-gold uppercase tracking-widest mx-auto shadow-inner">
+          <div className="inline-flex items-center gap-2 bg-[#07080C] border border-gold/10 rounded-full px-5 py-2 text-[10px] font-bold text-gold uppercase tracking-widest mx-auto shadow-inner">
             <span className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse" />
             WHY ELEVATE
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight uppercase">
+          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
             An ecosystem, not a course catalog
           </h2>
           <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl mx-auto font-medium">
@@ -116,7 +116,7 @@ export default function Ecosystem() {
             return (
               <div
                 key={idx}
-                className="rounded-[24px] p-8 flex flex-col text-left group hover:scale-[1.01] bg-[#0C0B0A]/90 border border-gold/10 hover:border-gold/30 hover:bg-[#12100F]/90 hover:shadow-lg hover:shadow-gold/40 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.8)]"
+                className="rounded-[24px] p-8 flex flex-col text-left group hover:scale-[1.01] bg-[#0C0B0A]/90 border border-gold/10 hover:border-gold/30 hover:bg-[#12100F]/90 hover:shadow-md hover:shadow-gold/40 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.8)]"
               >
                 {/* Icon Box - Circular with Gold border as per screenshot */}
                 <div className="w-12 h-12 rounded-full bg-[#1A1613] border border-gold/30 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
