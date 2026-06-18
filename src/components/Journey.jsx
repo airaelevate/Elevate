@@ -90,7 +90,7 @@ export default function JourneyTimeline() {
           </div>
 
           {/* ────────────────────────────────────────────────────────── */}
-          {/* HORIZONTAL TIMELINE MODULE (Desktop screens)              */}
+          {/* HORIZONTAL TIMELINE MODULE (Desktop screens)               */}
           {/* ────────────────────────────────────────────────────────── */}
           <div className="hidden lg:block absolute top-[38px] left-[8.33%] right-[8.33%] h-[2px] bg-zinc-900/80 z-0 overflow-hidden">
             {/* Running Fill Line */}
@@ -100,7 +100,7 @@ export default function JourneyTimeline() {
           </div>
 
           {/* ────────────────────────────────────────────────────────── */}
-          {/* TIMELINE INTERACTIVE NODES                                 */}
+          {/* TIMELINE PROCESS NODES                                     */}
           {/* ────────────────────────────────────────────────────────── */}
           <div className="flex flex-col sm:items-center lg:grid lg:grid-cols-6 gap-16 lg:gap-0 w-full relative z-10">
             {steps.map((step, idx) => {
@@ -111,34 +111,31 @@ export default function JourneyTimeline() {
               return (
                 <div 
                   key={step.id} 
-                  onMouseEnter={() => setActiveStep(idx)}
-                  className="flex flex-row lg:flex-col items-center gap-6 lg:gap-0 text-left lg:text-center w-full relative group cursor-pointer"
+                  className="flex flex-row lg:flex-col items-center gap-6 lg:gap-0 text-left lg:text-center w-full relative cursor-default"
                 >
                   {/* Step Icon Node Frame */}
                   <div className="relative flex-shrink-0 lg:mx-auto">
                     <div
                       className={`w-[76px] h-[76px] rounded-full flex items-center justify-center relative transform-gpu transition-all duration-500 ease-out
-                        group-hover:scale-115 group-hover:border-[#F5C143] group-hover:shadow-[0_0_25px_rgba(245,193,67,0.2)]
                         ${isCurrent 
                           ? "bg-[#050506] border-2 border-[#F5C143] scale-110 shadow-[0_0_35px_rgba(245,193,67,0.35)] text-[#F5C143]" 
                           : isPassed
                             ? "bg-[#050506] border border-[#F5C143]/60 text-[#F5C143]/90"
-                            : "bg-[#050506] border border-zinc-800 text-zinc-600 group-hover:text-zinc-200"
+                            : "bg-[#050506] border border-zinc-800 text-zinc-600"
                         }
                       `}
                     >
                       {/* Active Node Pulse Ring */}
                       {isCurrent && (
-                        <div className="absolute inset-0 rounded-full bg-[#F5C143]/10 animate-pulse duration-5000" />
+                        <div className="absolute inset-0 rounded-full bg-[#F5C143]/10 animate-pulse duration-2200" />
                       )}
                       
-                      <Icon className="w-6 h-6 text-current transition-transform duration-300 group-hover:rotate-6" />
+                      <Icon className="w-6 h-6 text-current" />
                     </div>
 
                     {/* Numerical Badge Counter */}
                     <span 
                       className={`absolute -top-1 -right-1 w-5.5 h-5.5 rounded-full font-black text-[9px] flex items-center justify-center border transition-all duration-500
-                        group-hover:border-[#F5C143]/40
                         ${isCurrent 
                           ? "bg-[#F5C143] text-black border-[#050506] scale-105" 
                           : isPassed 
@@ -154,7 +151,6 @@ export default function JourneyTimeline() {
                   {/* Descriptive Typography Text Block */}
                   <div 
                     className={`space-y-1 lg:mt-6 transition-all duration-500 transform-gpu lg:w-full lg:px-2
-                      group-hover:opacity-100 group-hover:translate-y-[-2px]
                       ${isCurrent 
                         ? "opacity-100 scale-100 translate-x-0" 
                         : "opacity-35"
@@ -162,12 +158,11 @@ export default function JourneyTimeline() {
                     `}
                   >
                     <h3 className={`text-base font-bold tracking-wide font-outfit transition-colors duration-500
-                      group-hover:text-[#F5C143]
                       ${isCurrent ? "text-[#F5C143]" : "text-zinc-100"}`}
                     >
                       {step.title}
                     </h3>
-                    <p className="text-xs text-zinc-400 font-medium max-w-[140px] lg:mx-auto leading-relaxed group-hover:text-zinc-300">
+                    <p className="text-xs text-zinc-400 font-medium max-w-[140px] lg:mx-auto leading-relaxed">
                       {step.desc}
                     </p>
                   </div>
