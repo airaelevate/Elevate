@@ -56,7 +56,7 @@ export default function Trajectory() {
           </div>
 
           {/* Pill 3: No career continuity */}
-          <div className="w-120 bg-[#0E0E11] border border-white/5 rounded-full  py-3.5 text-center text-lg font-bold text-[#F8F8F8] z-10 shadow-lg mb-6">
+          <div className="w-120 bg-[#0E0E11] border border-white/5 rounded-full  py-3.5 text-center text-lg font-bold text-red-500 z-10 shadow-lg mb-6">
             No career continuity
           </div>
         </div>

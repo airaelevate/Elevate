@@ -13,12 +13,11 @@ export default function JourneyTimeline() {
 
   const [activeStep, setActiveStep] = useState(0);
 
-  // Total loop is 12000ms (12s). Divided by 6 steps = exactly 2000ms per step stage.
-  // This perfectly syncs the active highlights with the CSS keyframe speed.
+  // Perfectly syncs the active highlights with the CSS continuous looping speed
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 1300); 
+    }, 1333); // 8000ms loop / 6 steps = ~1333ms per step segment
     return () => clearInterval(interval);
   }, [steps.length]);
 
@@ -49,11 +48,12 @@ export default function JourneyTimeline() {
         .animate-dot-run-h {
           animation: continuousDotHorizontal 8s linear infinite;
         }
+        /* Synced up mobile animations at 8s to run flawlessly with step interval timers */
         .animate-line-run-v {
-          animation: continuousLineVertical 12s linear infinite;
+          animation: continuousLineVertical 8s linear infinite;
         }
         .animate-dot-run-v {
-          animation: continuousDotVertical 12s linear infinite;
+          animation: continuousDotVertical 8s linear infinite;
         }
       `}</style>
 
@@ -64,7 +64,7 @@ export default function JourneyTimeline() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-24 space-y-4">
-          <div className="inline-flex items-center  gap-1.5 bg-[radial-gradient(circle_at_center,#15130d_100%,#07080b_100%,#020304_100%)] pointer-events-none border border-gold/30 rounded-full px-10 py-4 text-[15px] font-black text-[#F3BA26] uppercase tracking-widest mx-auto">
+          <div className="inline-flex items-center gap-1.5 bg-[radial-gradient(circle_at_center,#15130d_100%,#07080b_100%,#020304_100%)] pointer-events-none border border-gold/30 rounded-full px-10 py-4 text-[15px] font-black text-[#F3BA26] uppercase tracking-widest mx-auto">
             <span className="w-1.5 h-1.5 bg-[#F5C143] rounded-full animate-pulse" />
             THE JOURNEY
           </div>
@@ -82,17 +82,17 @@ export default function JourneyTimeline() {
           {/* ────────────────────────────────────────────────────────── */}
           {/* VERTICAL TIMELINE MODULE (Mobile & Tablet screens)         */}
           {/* ────────────────────────────────────────────────────────── */}
-          <div className="absolute left-[82px] sm:left-1/2 sm:-translate-x-1/2 top-[38px] bottom-[38px] w-[2px] bg-zinc-900 lg:hidden z-0">
-            {/* Running Fill Line */}
+          <div className="absolute left-[82px] sm:left-1/2 sm:-translate-x-1/2 top-[38px] bottom-[38px] w-[2px] bg-zinc-900/80 lg:hidden z-0 overflow-hidden">
+            {/* Unbroken golden continuous background running line */}
             <div className="absolute top-0 left-0 w-full bg-[#F5C143] shadow-[0_0_15px_#F5C143] animate-line-run-v" />
-            {/* Running Head Point */}
+            {/* Smoothly non-stopping vertical target dot */}
             <div className="absolute left-1/2 w-3 h-3 rounded-full bg-[#F5C143] shadow-[0_0_14px_5px_#F5C143] -translate-x-1/2 -translate-y-1/2 animate-dot-run-v" />
           </div>
 
           {/* ────────────────────────────────────────────────────────── */}
-          {/* HORIZONTAL TIMELINE MODULE (Desktop screens)               */}
+          {/* HORIZONTAL TIMELINE MODULE (Desktop screens)              */}
           {/* ────────────────────────────────────────────────────────── */}
-          <div className="hidden lg:block absolute top-[38px] left-[8.33%] right-[8.33%] h-[2px] bg-zinc-900/80 z-0">
+          <div className="hidden lg:block absolute top-[38px] left-[8.33%] right-[8.33%] h-[2px] bg-zinc-900/80 z-0 overflow-hidden">
             {/* Running Fill Line */}
             <div className="absolute top-0 left-0 h-full bg-[#F5C143] shadow-[0_0_20px_#F5C143] animate-line-run-h" />
             {/* Running Head Point */}
