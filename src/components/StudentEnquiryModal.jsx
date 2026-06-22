@@ -264,7 +264,7 @@ export default function StudentEnquiryModal({ isOpen, onClose }) {
                         Processing Credentials...
                       </>
                     ) : (
-                      "Request Catalogue &rarr;"
+                      "Request Catalogue"
                     )}
                   </button>
                 </div>
