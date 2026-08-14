@@ -5,6 +5,9 @@ import web18AugAlt from '../assets/Webinar/18 Aug 2026-1.jpeg';
 import web21Aug from '../assets/Webinar/21 Aug 2026.jpeg';
 import web25Aug from '../assets/Webinar/25 Aug 2026.jpeg';
 
+// Workshop
+import workshop_1 from '../assets/Workshop/Workshop 27th August_page-0001.jpg'
+
 export const programsData = {
   webinars: {
     id: 'PRODUCT 01',
@@ -171,74 +174,131 @@ export const programsData = {
   workshops: {
     id: 'PRODUCT 02',
     slug: 'workshops',
-    title: 'Upcoming Workshops',
-    tagline: 'Hands-on practice & feedback sessions',
+    title: 'Hands-on Workshops',
+    tagline: 'Practical learning & real project execution',
     heroTitle: 'Build Real Deliverables with Mentor Feedback',
-    heroDesc: 'Small-format, interactive bootcamps where you practice live, solve industry challenges, and leave with tangible work added to your profile.',
-    poster: 'https://elevate-skills-forward.lovable.app/assets/poster-workshop-BIQz4gOa.jpg',
-    regLink: 'https://forms.gle/',
+    heroDesc: 'Interactive 2-3 day bootcamps where you practice live, solve real industry challenges, build portfolio projects, and earn verified skill credentials.',
+    poster: workshop_1,
+    posterTitle: 'AI MARKETING STUDIO WORKSHOP',
+    posterSub: '3 Days Hands-on Workshop',
+    regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
     waLink: 'https://chat.whatsapp.com/',
     repLink: 'https://wa.me/917022603588',
     stats: [
-      { label: 'Format', value: '2-Day Bootcamp' },
-      { label: 'Outcome', value: 'Live Project Asset' },
-      { label: 'Mentorship', value: '1-on-1 Reviews' },
-      { label: 'Certificate', value: 'Skill Credential' }
+      { label: 'Duration', value: '3 Days (2 Hrs/Day)' },
+      { label: 'Format', value: 'Live Hands-on' },
+      { label: 'Certificate', value: 'Industry Credential' },
+      { label: 'Early Bird', value: '₹299 (Reg. ₹599)' }
     ],
     upcomingList: [
       {
-        id: 'wrk-1',
-        title: 'Resume Sculpting & ATS Optimization Studio',
-        date: '25 - 26 Aug 2026',
-        time: 'Weekend Batch (4 Hours Total)',
-        speaker: 'HR Talent Panel',
-        speakerRole: 'Corporate Recruiters',
-        image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800',
-        badge: 'Popular Workshop',
-        desc: 'Bring your draft resume and rebuild it live. Get direct feedback to ensure your resume passes Applicant Tracking Systems (ATS).',
+        id: 'wrk-up-1',
+        title: 'AI Marketing Studio Workshop',
+        tagline: 'Learn by Doing — 3 Days. Practical Learning. Real Skills.',
+        date: '27th – 29th Aug 2026',
+        time: '7:00 PM - 9:00 PM IST (3 Days)',
+        fee: '₹299',
+        originalFee: '₹599',
+        speaker: 'AI & Growth Marketing Panel',
+        speakerRole: 'Digital Marketing & AI Specialists',
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+        badge: 'Featured Workshop',
+        desc: 'A hands-on 3-day bootcamp for students to learn Digital Marketing using AI, build websites, automate email campaigns, and work on real-world projects.',
         takeaways: [
-          'ATS resume formatting and keyword density',
-          'Action-verb bullet point formulas for impact',
-          'Personal portfolio website setup in 60 mins'
+          'Day 1: AI Content Creation, image/video generation & email marketing',
+          'Day 2: AI Website Building & search engine optimization (SEO)',
+          'Day 3: Real Life Projects & Experience — Get experienced as a fresher!'
         ],
-        regLink: 'https://forms.gle/',
-        waLink: 'https://chat.whatsapp.com/'
+        perks: 'E-Certificate, Curated Study Materials & Optional Recorded Classes',
+        regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: false
       },
       {
-        id: 'wrk-2',
-        title: 'Full-Stack Development Sprint',
-        date: '01 - 02 Sep 2026',
+        id: 'wrk-up-2',
+        title: 'Resume Sculpting & ATS Optimization Studio',
+        tagline: 'Build a Resume That Lands Interview Calls',
+        date: '05th – 06th Sep 2026',
+        time: 'Weekend Batch (4 Hours Total)',
+        speaker: 'HR Talent Acquisition Leaders',
+        speakerRole: 'Corporate Recruiters & Resume Strategists',
+        image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800',
+        badge: 'Placement Special',
+        desc: 'Bring your draft resume and rebuild it live with recruiters. Ensure your resume passes Applicant Tracking Systems (ATS) and stands out.',
+        takeaways: [
+          'ATS resume formatting, keywords & parser compatibility',
+          'Action-verb bullet formulas for maximum impact',
+          'Personal portfolio showcase & LinkedIn alignment'
+        ],
+        perks: 'Editable Resume Templates & 1-on-1 Review',
+        regLink: 'https://forms.gle/',
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: false
+      },
+      {
+        id: 'wrk-up-3',
+        title: 'Full-Stack Web Development Sprint',
+        tagline: 'Build & Deploy Live Code in 2 Days',
+        date: '12th – 13th Sep 2026',
         time: 'Evening Intensive (6:00 PM - 8:30 PM)',
         speaker: 'Vikramaditya S.',
         speakerRole: 'Senior Full-Stack Architect',
         image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=800',
         badge: 'Hands-on Code',
-        desc: 'Build and deploy a full-stack React & Node.js application from scratch. Learn git, API integration, and cloud hosting.',
+        desc: 'Build and deploy a full-stack web application live. Master React components, Node.js API integration, and cloud hosting.',
         takeaways: [
-          'Building RESTful APIs with Node.js & Express',
-          'React component state & modern styling',
+          'RESTful API development with Node.js & Express',
+          'React component state & modern UI styling',
           'Deploying live to Vercel/Netlify with custom domain'
         ],
+        perks: 'GitHub Repo Template & Code Certification',
         regLink: 'https://forms.gle/',
-        waLink: 'https://chat.whatsapp.com/'
-      },
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: false
+      }
+    ],
+    completedList: [
       {
-        id: 'wrk-3',
+        id: 'wrk-comp-1',
         title: 'UI/UX & Figma Design Systems Studio',
-        date: '05 - 06 Sep 2026',
+        tagline: 'Design Interactive App Prototypes',
+        date: '02nd – 03rd Aug 2026',
         time: 'Weekend Sprint (10:00 AM - 1:00 PM)',
         speaker: 'Ananya Roy',
         speakerRole: 'Lead Product Designer',
         image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&q=80&w=800',
-        badge: 'Design Sprint',
-        desc: 'Design a mobile app interface in Figma. Master wireframing, component auto-layout, interactive prototypes, and design handoff.',
+        badge: 'Completed',
+        desc: 'Designed a mobile app interface in Figma. Wireframing, component auto-layout, interactive prototypes, and design handoff.',
         takeaways: [
           'User research & journey mapping fundamentals',
           'Figma auto-layout, variants & design tokens',
           'Creating interactive clickable prototypes'
         ],
+        perks: 'Design Asset Library & Certificate',
         regLink: 'https://forms.gle/',
-        waLink: 'https://chat.whatsapp.com/'
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: true
+      },
+      {
+        id: 'wrk-comp-2',
+        title: 'Digital Personal Branding & LinkedIn Studio',
+        tagline: 'Stand Out to Corporate Recruiters',
+        date: '08th – 09th Aug 2026',
+        time: 'Weekend Batch (2 Hours/Day)',
+        speaker: 'Rohan Malhotra',
+        speakerRole: 'Head of Growth, Elevate',
+        image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=800',
+        badge: 'Completed',
+        desc: 'Optimized student profiles, created content calendar strategy, and learned how talent acquisition teams source candidates.',
+        takeaways: [
+          'LinkedIn profile headline & summary framework',
+          'Content creation roadmap for student creators',
+          'Direct networking script for industry outreach'
+        ],
+        perks: 'Profile Audit Checklist & Verified Certificate',
+        regLink: 'https://forms.gle/',
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: true
       }
     ]
   },

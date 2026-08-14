@@ -58,14 +58,12 @@ export default function ProgramDetail() {
   const completedItems = programCategory.completedList || [];
 
   let displayedList = upcomingItems;
-  if (slug === 'webinars' || !slug) {
-    if (webinarFilter === 'completed') {
-      displayedList = completedItems;
-    } else if (webinarFilter === 'all') {
-      displayedList = [...upcomingItems, ...completedItems];
-    } else {
-      displayedList = upcomingItems;
-    }
+  if (webinarFilter === 'completed') {
+    displayedList = completedItems;
+  } else if (webinarFilter === 'all') {
+    displayedList = [...upcomingItems, ...completedItems];
+  } else {
+    displayedList = upcomingItems;
   }
 
   return (
@@ -200,12 +198,12 @@ export default function ProgramDetail() {
                 SCHEDULE & BROCHURES
               </span>
               <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0C192E]">
-                Webinar <span className="text-[#C59B27] font-normal italic">Brochures & Batches</span>
+                {programCategory.title} <span className="text-[#C59B27] font-normal italic">Batches & Details</span>
               </h2>
             </div>
 
-            {/* Filter Tabs for Webinars */}
-            {(slug === 'webinars' || !slug) && (
+            {/* Filter Tabs */}
+            {(upcomingItems.length > 0 || completedItems.length > 0) && (
               <div className="flex items-center gap-2 bg-white p-1.5 rounded-2xl border border-[#EAE1D0] shadow-sm shrink-0">
                 <button
                   onClick={() => setWebinarFilter('upcoming')}
@@ -215,7 +213,7 @@ export default function ProgramDetail() {
                       : 'text-slate-600 hover:text-[#0C192E] hover:bg-slate-100'
                   }`}
                 >
-                  Upcoming Webinars ({upcomingItems.length})
+                  Upcoming ({upcomingItems.length})
                 </button>
                 <button
                   onClick={() => setWebinarFilter('completed')}
@@ -225,7 +223,7 @@ export default function ProgramDetail() {
                       : 'text-slate-600 hover:text-[#0C192E] hover:bg-slate-100'
                   }`}
                 >
-                  Completed Webinars ({completedItems.length})
+                  Completed ({completedItems.length})
                 </button>
                 <button
                   onClick={() => setWebinarFilter('all')}

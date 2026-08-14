@@ -21,12 +21,12 @@ export default function Products() {
     {
       id: 'PRODUCT 02',
       slug: 'workshops',
-      title: 'Upcoming Workshops',
-      desc: 'Hands-on, practice-first sessions. You build something, you get feedback, and you leave with an actionable plan.',
-      poster: 'https://elevate-skills-forward.lovable.app/assets/poster-workshop-BIQz4gOa.jpg',
-      posterTitle: 'RESUME & INTERVIEW SKILLS',
-      posterSub: 'Hands-on Workshop',
-      regLink: 'https://forms.gle/',
+      title: 'Hands-on Workshops',
+      desc: 'Hands-on 2-3 day intensive bootcamps. Practice live, learn AI tools, build real project deliverables with direct mentor feedback.',
+      poster: programsData.workshops.poster,
+      posterTitle: 'AI MARKETING STUDIO WORKSHOP',
+      posterSub: '3 Days Hands-on Workshop',
+      regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
       waLink: 'https://chat.whatsapp.com/',
       repLink: 'https://wa.me/917022603588'
     },
