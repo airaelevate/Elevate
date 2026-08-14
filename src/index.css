@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --bg-cream: oklch(0.972 0.017 84);
+  --color-navy: oklch(0.21 0.045 265);
+  --color-gold: oklch(0.68 0.13 72);
+  --color-soft-gold: oklch(0.88 0.06 80);
+  
+  --foreground: oklch(0.21 0.045 265);
+  --muted-text: oklch(0.5 0.03 265);
+  --card-bg: oklch(0.987 0.01 84);
+  --borders: oklch(0.89 0.03 82);
+  --destructive: oklch(0.577 0.245 27.325);
+  
+  --gold-gradient: linear-gradient(100deg, oklch(0.62 0.13 65), oklch(0.82 0.12 85));
+  --ink-gradient: linear-gradient(160deg, oklch(0.21 0.045 265), oklch(0.28 0.06 262));
+}
+
+.dark {
+  --bg-cream: oklch(0.18 0.035 265);
+  --foreground: oklch(0.96 0.015 84);
+  --card-bg: oklch(0.21 0.045 265);
+  --borders: oklch(0.3 0.04 265);
+  --muted-text: oklch(0.7 0.02 84);
+}
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+
+  --color-brand-cream: oklch(0.972 0.017 84);
+  --color-brand-navy: oklch(0.21 0.045 265);
+  --color-brand-gold: oklch(0.68 0.13 72);
+  --color-brand-soft-gold: oklch(0.88 0.06 80);
+  --color-brand-border: oklch(0.89 0.03 82);
+  --color-brand-card: oklch(0.987 0.01 84);
+  --color-brand-muted: oklch(0.5 0.03 265);
+  --color-brand-foreground: oklch(0.21 0.045 265);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-cream);
+    color: var(--foreground);
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+  }
+}
+
+.bg-gold-gradient {
+  background: var(--gold-gradient);
+}
+
+.bg-ink-gradient {
+  background: var(--ink-gradient);
+}
+
+.text-gold-gradient {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 45s linear infinite;
+}
+
+.pause-on-hover:hover .animate-marquee,
+.pause-on-hover:hover .animate-marquee-reverse {
+  animation-play-state: paused;
+}
+
