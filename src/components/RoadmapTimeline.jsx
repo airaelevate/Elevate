@@ -51,7 +51,7 @@ export default function RoadmapTimeline() {
 
     const timer = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 3000);
+    }, 1500);
 
     return () => clearInterval(timer);
   }, [isPaused, steps.length]);
