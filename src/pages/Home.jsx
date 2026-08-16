@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Users, Briefcase, Compass, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
-import home from '../assets/home.png'
+import home from '../assets/home.png';
+import RoadmapTimeline from '../components/RoadmapTimeline';
 
 export default function Home() {
   const stats = [
@@ -48,13 +49,10 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="lg:col-span-5 flex flex-col justify-center"
           >
-            <div className="text-[#C59B27] text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] mb-4">
-              PLAN. PROMOTE. CONNECT. ELEVATE.
-            </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#0C192E] leading-[1.1] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#0C192E] leading-[1.1] tracking-tight">
               Beyond <br />
-              your <span className="text-[#C59B27] font-serif font-normal">degree</span>
+              your <span className="text-[#C59B27] font-serif font-bold">degree</span>
             </h1>
 
             <p className="mt-6 text-slate-700 text-base sm:text-lg leading-relaxed">
@@ -64,10 +62,10 @@ export default function Home() {
             <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-6">
               <Link
                 to="/products"
-                className="group inline-flex items-center gap-3 px-8 py-3.5 bg-[#0C192E] hover:bg-[#C59B27] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+                className="group inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-[#C2781B] via-[#D8982D] to-[#ECC262] text-[#0C192E] text-xs font-bold uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl hover:brightness-105 transition-all duration-300 transform hover:-translate-y-0.5"
               >
                 EXPLORE PROGRAMS
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="h-4 w-4 text-[#0C192E] group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
               <Link
                 to="/about"
@@ -179,6 +177,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Auto-Running 5-Step Roadmap Section */}
+      <section className="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[#EAE1D0]">
+        <RoadmapTimeline />
+      </section>
+
       {/* Bottom CTA Banner */}
       <section className="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
@@ -192,14 +195,14 @@ export default function Home() {
             Students across India are already <span className="text-[#C59B27] font-normal">elevating</span>
           </h2>
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            From metro campuses to tier-3 towns, our community learns together in one place — every session designed to be practical, current and free of fluff.
+            From back benchers to toppers in the front seat, our community learns together in one place — every session designed to be practical, current and free of fluff.
           </p>
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-3 px-8 py-4 bg-[#C59B27] hover:bg-[#0C192E] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#C2781B] via-[#D8982D] to-[#ECC262] text-[#0C192E] text-xs sm:text-sm font-bold uppercase tracking-wider rounded-full shadow-md hover:shadow-xl hover:brightness-105 transition-all duration-300 transform hover:-translate-y-0.5"
           >
             COME ON BOARD
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1.5 transition-transform duration-300" />
+            <ArrowRight className="h-4 w-4 text-[#0C192E] group-hover:translate-x-1.5 transition-transform duration-300" />
           </Link>
         </motion.div>
       </section>

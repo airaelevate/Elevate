@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, GraduationCap, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logo from '../assets/Elevate-logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,18 +45,15 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex flex-col group">
             <div className="flex items-center space-x-1.5">
-              <span className="font-serif font-extrabold text-2xl tracking-wider text-[#0C192E]">
-                ELEVATE
-              </span>
+              <span className="text-2xl font-serif font-bold text-[#C59B27] tracking-[0.25em]">ELEVATE</span>
             </div>
-            <div className="flex items-center space-x-1 text-[9px] font-semibold text-[#C59B27] uppercase tracking-[0.2em] -mt-0.5">
-              <span className="h-[1px] w-2 bg-[#C59B27]"></span>
-              <span>BEYOND YOUR DEGREE</span>
-              <span className="h-[1px] w-2 bg-[#C59B27]"></span>
+            <div className="flex items-center space-x-1 text-[9px] font-semibold text-[#556070] uppercase tracking-[0.2em] -mt-0.5">
+              <span className="h-[1px] w-8 bg-[#C59B27]"></span>
+              <span className="text-GRAY-900 ">BEYOND YOUR DEGREE</span>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation & Call to Action (Right Aligned) */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
@@ -64,7 +62,7 @@ export default function Navbar() {
                   key={link.name}
                   to={link.path}
                   className={`relative text-sm font-medium transition-colors hover:text-[#C59B27] ${
-                    isActive ? 'text-[#0C192E] font-semibold' : 'text-slate-600'
+                    isActive ? 'text-[#0C192E] font-bold' : 'text-slate-600'
                   }`}
                 >
                   {link.name}
@@ -78,13 +76,10 @@ export default function Navbar() {
                 </Link>
               );
             })}
-          </div>
 
-          {/* Desktop Call to Action */}
-          <div className="hidden md:flex items-center">
             <Link 
               to="/products" 
-              className="inline-flex items-center justify-center px-6 py-2.5 bg-[#0C192E] hover:bg-[#172A46] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center px-6 py-2.5 bg-[#0C192E] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-sm hover:bg-[#162744] hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 ml-2"
             >
               JOIN A BATCH
             </Link>
@@ -131,7 +126,7 @@ export default function Navbar() {
               <div className="pt-3">
                 <Link
                   to="/products"
-                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-[#0C192E] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-md"
+                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-[#0C192E] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-md hover:bg-[#162744] transition-all"
                 >
                   JOIN A BATCH
                 </Link>

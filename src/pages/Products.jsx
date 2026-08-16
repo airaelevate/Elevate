@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ExternalLink, MessageCircle, HelpCircle, ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { programsData } from '../data/programsData';
+import StudentEnquiryModal from './StudentEnquiryModal';
+import career from '../assets/careerlunchpad.jpeg';
+import professional from '../assets/professional.jpeg';
+import workshop from '../assets/Workshop.jpeg';
+
 
 export default function Products() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const products = [
     {
       id: 'PRODUCT 01',
       slug: 'webinars',
       title: 'Interactive Webinars',
-      desc: 'Live, expert-led 2-hour sessions on high-demand AI, sales, digital marketing, and placement skills.',
+      desc: 'Live expert sessions on the skills the market is hiring for. Open to students from every domain.',
       poster: programsData.webinars.poster,
       posterTitle: 'HOW TO GET INTERNSHIPS USING AI',
       posterSub: 'Live Interactive Session',
@@ -22,8 +28,8 @@ export default function Products() {
       id: 'PRODUCT 02',
       slug: 'workshops',
       title: 'Hands-on Workshops',
-      desc: 'Hands-on 2-3 day intensive bootcamps. Practice live, learn AI tools, build real project deliverables with direct mentor feedback.',
-      poster: programsData.workshops.poster,
+      desc: 'Hands-on, practice-first sessions. You build something, you get feedback, you leave with an action plan.',
+      poster: workshop,
       posterTitle: 'AI MARKETING STUDIO WORKSHOP',
       posterSub: '3 Days Hands-on Workshop',
       regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
@@ -33,9 +39,9 @@ export default function Products() {
     {
       id: 'PRODUCT 03',
       slug: 'courses',
-      title: 'Value Added Certificate Courses',
+      title: 'Professional Certification Courses',
       desc: 'Structured certification batches with real projects, expert mentors and a credential that strengthens your resume.',
-      poster: 'https://elevate-skills-forward.lovable.app/assets/poster-course-DYoVQKkh.jpg',
+      poster: professional,
       posterTitle: 'VALUE ADDED CERTIFICATE COURSES',
       posterSub: 'Industry Recognized Credentials',
       regLink: 'https://forms.gle/',
@@ -45,9 +51,9 @@ export default function Products() {
     {
       id: 'PRODUCT 04',
       slug: 'internships',
-      title: 'Internship & Placement Assistance',
+      title: 'Career Launchpad Program',
       desc: 'Curated internships, profile building, mock interviews and recruiter connections to carry you into your first role.',
-      poster: 'https://elevate-skills-forward.lovable.app/assets/poster-placement-CwbKdW8l.jpg',
+      poster: career,
       posterTitle: 'INTERNSHIP & PLACEMENT ASSISTANCE',
       posterSub: 'Career Accelerator',
       regLink: 'https://forms.gle/',
@@ -57,7 +63,7 @@ export default function Products() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAF6F0] text-slate-800 pt-28 pb-20">
+    <div className="min-h-screen bg-[#FBF5E9] text-slate-800 pt-28 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Intro */}
@@ -75,7 +81,7 @@ export default function Products() {
             transition={{ delay: 0.1 }}
             className="text-4xl sm:text-6xl font-serif text-[#0C192E] leading-tight tracking-tight"
           >
-            Five Steps. One Continuous <span className="text-[#C59B27] font-serif font-normal">Journey</span>
+            Four ways to get <span className="text-[#C59B27] font-serif font-normal">industry ready</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 15 }}
@@ -152,27 +158,25 @@ export default function Products() {
                       <ArrowRight className="h-4 w-4" />
                     </Link>
 
-                    {/* Whatsapp Community */}
-                    <a
-                      href={prod.waLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3.5 bg-transparent border-2 border-[#C59B27] hover:bg-[#C59B27]/10 text-[#C59B27] text-xs font-bold uppercase tracking-wider rounded-full transition-all"
-                    >
-                      <MessageCircle className="h-4 w-4" />
-                      WHATSAPP COMMUNITY
-                    </a>
-
                     {/* Contact Rep */}
                     <a
                       href={prod.repLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-3.5 bg-white border border-[#EAE1D0] hover:border-[#C59B27] text-slate-700 hover:text-[#0C192E] text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow-sm"
+                      className="inline-flex items-center gap-2 px-6 py-3.5 bg-transparent border-2 border-[#C59B27] hover:bg-[#C59B27]/10 text-[#C59B27] text-xs font-bold uppercase tracking-wider rounded-full transition-all"
                     >
-                      <HelpCircle className="h-4 w-4 text-[#C59B27]" />
+                      <MessageCircle className="h-4 w-4" />
                       REPRESENTATIVE
                     </a>
+
+                    {/* Student Enquiry Modal Trigger */}
+                    <button
+                      onClick={() => setIsModalOpen(true)}
+                      className="inline-flex items-center gap-2 px-5 py-3.5 bg-white border border-[#EAE1D0] hover:border-[#C59B27] text-slate-700 hover:text-[#0C192E] text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow-sm cursor-pointer"
+                    >
+                      <HelpCircle className="h-4 w-4 text-[#C59B27]" />
+                      KNOW MORE
+                    </button>
                   </div>
                 </div>
               </motion.div>
@@ -181,6 +185,12 @@ export default function Products() {
         </div>
 
       </div>
+
+      {/* Student Enquiry Modal */}
+      <StudentEnquiryModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 }

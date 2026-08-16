@@ -114,7 +114,7 @@ export default function ProgramDetail() {
               {/* Category Key Stats Chips */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
                 {programCategory.stats.map((stat, idx) => (
-                  <div key={idx} className="bg-white p-3.5 rounded-2xl border border-[#EAE1D0] shadow-sm">
+                  <div key={idx} className="bg-white p-3.5 rounded-2xl border border-[#EAE1D0] shadow-sm hover:scale-110 transition-transform duration-300 cursor-pointer hover:bg-[#FAF3E6]">
                     <span className="text-[11px] text-slate-500 block uppercase font-medium tracking-wider">
                       {stat.label}
                     </span>
@@ -142,18 +142,17 @@ export default function ProgramDetail() {
                   className="inline-flex items-center gap-2 px-6 py-3.5 bg-transparent border-2 border-[#C59B27] hover:bg-[#C59B27]/10 text-[#C59B27] text-xs font-bold uppercase tracking-wider rounded-full transition-all"
                 >
                   <MessageCircle className="h-4 w-4" />
-                  WHATSAPP COMMUNITY
+                   REPRESENTATIVE
                 </a>
 
-                <a
-                  href={programCategory.repLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3.5 bg-white border border-[#EAE1D0] hover:border-[#C59B27] text-slate-700 hover:text-[#0C192E] text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow-sm"
-                >
-                  <HelpCircle className="h-4 w-4 text-[#C59B27]" />
-                  REPRESENTATIVE
-                </a>
+                    {/* Student Enquiry Modal Trigger */}
+                    <button
+                      onClick={() => setIsModalOpen(true)}
+                      className="inline-flex items-center gap-2 px-5 py-3.5 bg-white border border-[#EAE1D0] hover:border-[#C59B27] text-slate-700 hover:text-[#0C192E] text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow-sm cursor-pointer"
+                    >
+                      <HelpCircle className="h-4 w-4 text-[#C59B27]" />
+                      KNOW MORE
+                    </button>
               </div>
             </motion.div>
 

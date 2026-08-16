@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Compass, Target, Star, Sparkles, UserCheck } from 'lucide-react';
+import RoadmapTimeline from '../components/RoadmapTimeline';
 
 export default function About() {
 
@@ -27,7 +28,7 @@ export default function About() {
       program: 'Value Added Certification',
       rating: 5,
       avatar: null,
-      quote: 'Thank you so much, Mr. Aravind Warrier sir (HR Leader, Volvo Group) & Team Elevate! 💙✨ I’m truly grateful for this special appreciation and recognition. It was a wonderful session, and I really enjoyed being an interactive part of it. Thank you for creating such an engaging learning experience! 🚀🎓',
+      quote: 'Thank you so much to the HR Leaders & Team Elevate! 💙✨ I’m truly grateful for this special appreciation and recognition. It was a wonderful session, and I really enjoyed being an interactive part of it. Thank you for creating such an engaging learning experience! 🚀🎓',
       badge: 'Interactive Learner',
       category: 'Student'
     },
@@ -53,7 +54,7 @@ export default function About() {
       program: 'Industry Internship Program',
       rating: 5,
       avatar: null,
-      quote: 'The students of the Department of Commerce with Computer Applications, Arul Anandar College, Karumathur, Madurai, participated in a free webinar on “Digital Marketing & AI Skills” conducted by Elevate. Ms. Riza, the resource person, delivered an informative and detailed session on digital marketing and essential AI skills, providing valuable insights and practical knowledge to the students.',
+      quote: 'The students of the Department of Commerce with Computer Applications, Arul Anandar College, Karumathur, Madurai, participated in a free webinar on “Digital Marketing & AI Skills” conducted by Elevate. The resource person delivered an informative and detailed session on digital marketing and essential AI skills, providing valuable insights and practical knowledge to the students.',
       badge: 'Internship Alumnus',
       category: 'Intern'
     },
@@ -85,40 +86,6 @@ export default function About() {
     }
   ];
 
-  // 5-Step Roadmap Data
-  const steps = [
-    {
-      num: 'STEP 01',
-      title: 'Plan',
-      desc: 'Discover career goals, identify skill gaps, and map out your personalized learning trajectory from campus to corporate.',
-      icon: Compass
-    },
-    {
-      num: 'STEP 02',
-      title: 'Skill Up',
-      desc: 'Master in-demand industry tools through interactive webinars, hands-on workshops, and practical certification courses.',
-      icon: Sparkles
-    },
-    {
-      num: 'STEP 03',
-      title: 'Promote',
-      desc: 'Craft ATS-ready resumes, optimize LinkedIn profiles, and showcase real-world projects to gain high industry visibility.',
-      icon: UserCheck
-    },
-    {
-      num: 'STEP 04',
-      title: 'Connect',
-      desc: 'Engage directly with top industry practitioners, HR leaders, and corporate mentors through interactive sessions.',
-      icon: Target
-    },
-    {
-      num: 'STEP 05',
-      title: 'Elevate',
-      desc: 'Secure high-impact internships, placement assistance, and step confidently into your dream professional role.',
-      icon: Star
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-[#FBF5E9] text-slate-800 pt-28 pb-20 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -138,7 +105,7 @@ export default function About() {
             transition={{ delay: 0.1 }}
             className="text-4xl sm:text-6xl md:text-7xl font-serif text-[#0C192E] leading-tight max-w-4xl tracking-tight"
           >
-            We exist for the gap between a <span className="text-[#C59B27] font-serif  font-normal">degree</span> and a career.
+            We exist for the gap between a <span className="text-[#C59B27] font-serif font-normal">degree</span> and a career.
           </motion.h1>
 
           <motion.div 
@@ -157,65 +124,24 @@ export default function About() {
         </section>
 
         {/* Roadmap Section */}
-        <section className="py-16 border-t border-[#F5ECDC]">
-          <div className="flex items-center justify-start gap-4 mb-4">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#8C6D23] font-semibold">
-              THE STUDENT ROADMAP
-            </span>
-            <div className="h-[1px] flex-grow bg-[#D9C4A0]"></div>
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0C192E] mb-16">
-            Five steps. One continuous journey.
-          </h2>
-
-          {/* 5-Step Horizontal Flow */}
-          <div className="relative">
-            {/* Connecting Horizontal Gold Line (desktop) */}
-            <div className="hidden lg:block absolute top-8 left-12 right-12 h-[2px] bg-[#E5D7BE] -z-0"></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 relative z-10">
-              {steps.map((step, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="flex flex-col items-start"
-                >
-                  <div className="w-14 h-14 rounded-full bg-[#FAF3E6] border-2 border-[#D9C4A0] flex items-center justify-center mb-6 shadow-sm">
-                    <step.icon className="h-6 w-6 text-[#C59B27]" />
-                  </div>
-                  <span className="text-xs font-serif font-bold text-[#C59B27] block mb-1">
-                    {step.num}
-                  </span>
-                  <h3 className="text-xl font-serif font-bold text-[#0C192E] mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                    {step.desc}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+        <section className="py-12  border-[#EAE1D0]">
+          <RoadmapTimeline />
         </section>
 
         {/* Our Vision & Our Mission */}
-        <section className="py-16 border-t border-[#EAE1D0] grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="py-16  border-[#EAE1D0] grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Vision - Dark Navy */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="p-8 sm:p-10 rounded-3xl bg-[#0C192E] border border-[#1E2D45] text-white shadow-xl flex flex-col justify-between"
+            className="p-8 sm:p-10 rounded-3xl bg-[#0C192E] border border-[#1E2D45] text-white shadow-xl flex flex-col justify-between transition-all duration-500 transform hover:-translate-y-2 hover:border-[#C59B27] hover:shadow-2xl hover:shadow-[#C59B27]/10 group cursor-pointer"
           >
             <div>
-              <div className="w-12 h-12 rounded-full bg-[#172740] border border-[#2B4063] flex items-center justify-center mb-6">
-                <Compass className="h-6 w-6 text-[#C59B27]" />
+              <div className="w-12 h-12 rounded-full bg-[#172740] border border-[#2B4063] flex items-center justify-center mb-6 group-hover:bg-[#C59B27] group-hover:border-[#C59B27] transition-all duration-300">
+                <Compass className="h-6 w-6 text-[#C59B27] group-hover:text-[#0C192E] transition-colors duration-300" />
               </div>
-              <h3 className="text-2xl font-serif font-bold text-white mb-4">Our Vision</h3>
+              <h3 className="text-2xl font-serif font-bold text-white mb-4 group-hover:text-[#C59B27] transition-colors duration-300">Our Vision</h3>
               <p className="text-slate-300 text-sm leading-relaxed">
                 To be a lasting part of every student’s journey — the companion that stands beside them from their first year of college to their first day at work, and helps the coming generation stay skilled in a real world that keeps rewriting its rules.
               </p>
@@ -227,13 +153,13 @@ export default function About() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="p-8 sm:p-10 rounded-3xl bg-white border border-[#EAE1D0] shadow-sm flex flex-col justify-between"
+            className="p-8 sm:p-10 rounded-3xl bg-white border border-[#EAE1D0] shadow-sm flex flex-col justify-between transition-all duration-500 transform hover:-translate-y-2 hover:border-[#C59B27] hover:shadow-xl group cursor-pointer"
           >
             <div>
-              <div className="w-12 h-12 rounded-full bg-[#FAF3E6] border border-[#E8D7B8] flex items-center justify-center mb-6">
-                <Target className="h-6 w-6 text-[#C59B27]" />
+              <div className="w-12 h-12 rounded-full bg-[#FAF3E6] border border-[#E8D7B8] flex items-center justify-center mb-6 group-hover:bg-[#C59B27] group-hover:border-[#C59B27] transition-all duration-300">
+                <Target className="h-6 w-6 text-[#C59B27] group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-2xl font-serif font-bold text-[#0C192E] mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-serif font-bold text-[#0C192E] mb-4 group-hover:text-[#8C6D23] transition-colors duration-300">Our Mission</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
                 To deliver accessible, practical and current learning — webinars, workshops, value added courses, internships and placement assistance — so that every student, from every domain and every corner of India, graduates with skills the industry is actively looking for.
               </p>
@@ -242,7 +168,7 @@ export default function About() {
         </section>
 
         {/* UPGRADED TESTIMONIALS SECTION */}
-        <section className="py-20 border-t border-[#EAE1D0]">
+        <section className="py-20  border-[#EAE1D0]">
           {/* Header & Stat Pills */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
@@ -309,7 +235,7 @@ export default function About() {
                       </p>
                     </div>
 
-                    <div className="flex items-center gap-3 pt-3.5 border-t border-[#F5ECDC]">
+                    <div className="flex items-center gap-3 pt-3.5  border-[#F5ECDC]">
                       {item.avatar ? (
                         <img
                           src={item.avatar}
