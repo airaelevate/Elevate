@@ -354,15 +354,6 @@ export default function ProgramDetail() {
                           <ExternalLink className="w-3.5 h-3.5" />
                         </button>
 
-                        <a
-                          href={item.waLink || programCategory.waLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-full py-2.5 px-4 bg-transparent border border-[#C59B27] text-[#C59B27] hover:bg-[#C59B27]/10 text-xs font-bold uppercase tracking-wider rounded-full transition-all text-center flex items-center justify-center gap-2"
-                        >
-                          <MessageCircle className="w-3.5 h-3.5" />
-                          JOIN WHATSAPP GROUP
-                        </a>
                       </>
                     ) : (
                       <div className="flex flex-col gap-2">

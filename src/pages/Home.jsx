@@ -177,11 +177,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Auto-Running 5-Step Roadmap Section */}
-      <section className="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[#EAE1D0]">
-        <RoadmapTimeline />
-      </section>
-
       {/* Bottom CTA Banner */}
       <section className="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
