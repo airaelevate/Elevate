@@ -7,7 +7,7 @@ import StudentEnquiryModal from './StudentEnquiryModal';
 import career from '../assets/careerlunchpad.jpeg';
 import professional from '../assets/professional.jpeg';
 import workshop from '../assets/Workshop.jpeg';
-import Webinar from '../assets/webinar.png';
+import Webinar from '../assets/Webinar.png';
 
 
 export default function Products() {
