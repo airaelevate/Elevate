@@ -1,8 +1,11 @@
-import React from 'react';
-import { Mail, Phone, MessageSquare, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Phone, MessageSquare, Sparkles, FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
+import StudentEnquiryModal from './StudentEnquiryModal';
 
 export default function Contact() {
+  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-[#FAF6F0] text-slate-800 pt-28 pb-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,7 +85,7 @@ export default function Contact() {
           </motion.a>
         </div>
 
-        {/* Big Quote & Representative Card */}
+        {/* Big Quote & Action Cards */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -97,22 +100,39 @@ export default function Contact() {
             “Your ambition deserves a team that keeps showing up for it. Tell us where you want to go — we will build the path with you.”
           </h2>
 
-          <div className="flex flex-col items-center">
-            <a
-              href="https://wa.me/917022603588"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-8 py-3.5 bg-gold-gradient hover:opacity-95 text-[#0C192E] text-xs font-bold uppercase tracking-wider rounded-full shadow-md transition-all transform hover:-translate-y-0.5"
-            >
-              <MessageSquare className="h-4 w-4" />
-              MESSAGE A REPRESENTATIVE
-            </a>
+          <div className="flex flex-col items-center space-y-6">
+            {/* 2-Box Action Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-xl">
+              <a
+                href="https://wa.me/917022603588"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-gold-gradient hover:opacity-95 text-[#0C192E] text-xs font-bold uppercase tracking-wider rounded-full shadow-md transition-all transform hover:-translate-y-0.5"
+              >
+                <MessageSquare className="h-4 w-4" />
+                MESSAGE REPRESENTATIVE
+              </a>
 
-            <span className="mt-6 text-sm font-serif italic text-[#C59B27]">
+              <button
+                onClick={() => setIsEnquiryOpen(true)}
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#0C192E] hover:bg-[#162744] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-md transition-all transform hover:-translate-y-0.5 border border-[#C59B27]/30 cursor-pointer"
+              >
+                <FileText className="h-4 w-4 text-[#C59B27]" />
+                STUDENT ENQUIRY FORM
+              </button>
+            </div>
+
+            <span className="text-sm font-serif italic text-[#C59B27] block">
               Let's Elevate together.
             </span>
           </div>
         </motion.div>
+
+        {/* Student Enquiry Modal */}
+        <StudentEnquiryModal 
+          isOpen={isEnquiryOpen} 
+          onClose={() => setIsEnquiryOpen(false)} 
+        />
 
       </div>
     </div>

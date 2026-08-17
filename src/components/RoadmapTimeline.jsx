@@ -3,58 +3,58 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Tv, Wrench, BookOpen, Briefcase, Target, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function RoadmapTimeline() {
-  const steps = [
-    {
-      num: '0 1',
-      title: 'Webinars',
-      desc: 'Live, expert-led sessions that open your eyes to what the industry actually runs on — AI, digital marketing, emerging careers.',
-      icon: Tv,
-      link: '/products'
-    },
-    {
-      num: '0 2',
-      title: 'Workshops',
-      desc: 'Hands-on, small-format sessions where you build, practise and get feedback — resumes, tools, interviews, communication.',
-      icon: Wrench,
-      link: '/products'
-    },
-    {
-      num: '0 3',
-      title: 'Value Added Courses',
-      desc: 'Structured certification batches that add depth to your degree with real projects and industry-relevant curriculum.',
-      icon: BookOpen,
-      link: '/products'
-    },
-    {
-      num: '0 4',
-      title: 'Internships',
-      desc: 'Curated internship opportunities so your learning meets real deliverables, real teams and real accountability.',
-      icon: Briefcase,
-      link: '/products'
-    },
-    {
-      num: '0 5',
-      title: 'Placement Assistance',
-      desc: 'Profile building, mock interviews and recruiter connections that carry you across the final mile into a career.',
-      icon: Target,
-      link: '/products'
-    }
-  ];
+const STEPS = [
+  {
+    num: '0 1',
+    title: 'Webinars',
+    desc: 'Live, expert-led sessions that open your eyes to what the industry actually runs on — AI, digital marketing, emerging careers.',
+    icon: Tv,
+    link: '/products'
+  },
+  {
+    num: '0 2',
+    title: 'Workshops',
+    desc: 'Hands-on, small-format sessions where you build, practise and get feedback — resumes, tools, interviews, communication.',
+    icon: Wrench,
+    link: '/products'
+  },
+  {
+    num: '0 3',
+    title: 'Value Added Courses',
+    desc: 'Structured certification batches that add depth to your degree with real projects and industry-relevant curriculum.',
+    icon: BookOpen,
+    link: '/products'
+  },
+  {
+    num: '0 4',
+    title: 'Internships',
+    desc: 'Curated internship opportunities so your learning meets real deliverables, real teams and real accountability.',
+    icon: Briefcase,
+    link: '/products'
+  },
+  {
+    num: '0 5',
+    title: 'Placement Assistance',
+    desc: 'Profile building, mock interviews and recruiter connections that carry you across the final mile into a career.',
+    icon: Target,
+    link: '/products'
+  }
+];
 
+export default function RoadmapTimeline() {
   const [activeStep, setActiveStep] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Auto-run animation timer (advances every 3 seconds smoothly)
+  // Auto-run animation timer (advances smoothly every 3.5 seconds)
   useEffect(() => {
     if (isPaused) return;
 
     const timer = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 1500);
+      setActiveStep((prev) => (prev + 1) % STEPS.length);
+    }, 3500);
 
     return () => clearInterval(timer);
-  }, [isPaused, steps.length]);
+  }, [isPaused]);
 
   return (
     <div 
@@ -75,26 +75,26 @@ export default function RoadmapTimeline() {
 
         {/* Live Step Progress Indicator Pill */}
         <div className="mt-4 md:mt-0 inline-flex items-center gap-3 bg-[#FAF3E6] border border-[#E8D7B8] px-4 py-2 rounded-full text-xs font-semibold text-[#0C192E] shadow-sm">
-          <span className="w-2 h-2 rounded-full bg-[#C59B27] animate-ping"></span>
-          <span>STEP 0{activeStep + 1} OF 05 : <strong className="text-[#C59B27] uppercase">{steps[activeStep].title}</strong></span>
+          <span className="w-2.5 h-2.5 rounded-full bg-[#C59B27] animate-pulse"></span>
+          <span>STEP 0{activeStep + 1} OF 05 : <strong className="text-[#C59B27] uppercase">{STEPS[activeStep].title}</strong></span>
         </div>
       </div>
 
       {/* Timeline Flow Container */}
       <div className="relative pt-2">
         {/* Horizontal Connecting Line (Desktop) */}
-        <div className="hidden lg:block absolute top-[44px] left-[8%] right-[8%] h-[2px] bg-[#E2D6C1] z-0">
+        <div className="hidden lg:block absolute top-[48px] left-[8%] right-[8%] h-[2px] bg-[#E2D6C1] z-0">
           <motion.div 
-            className="h-full bg-gradient-to-r from-[#C59B27] via-[#D8982D] to-[#C59B27] rounded-full shadow-[0_0_10px_rgba(197,155,39,0.7)]"
+            className="h-full bg-gradient-to-r from-[#C59B27] via-[#D8982D] to-[#C59B27] rounded-full shadow-[0_0_10px_rgba(197,155,39,0.5)] transform-gpu"
             initial={{ width: '0%' }}
-            animate={{ width: `${(activeStep / (steps.length - 1)) * 100}%` }}
-            transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+            animate={{ width: `${(activeStep / (STEPS.length - 1)) * 100}%` }}
+            transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
           />
         </div>
 
         {/* 5-Step Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
-          {steps.map((step, index) => {
+          {STEPS.map((step, index) => {
             const isActive = activeStep === index;
             const isCompleted = activeStep > index;
             const Icon = step.icon;
@@ -103,14 +103,14 @@ export default function RoadmapTimeline() {
               <div
                 key={step.num}
                 onClick={() => setActiveStep(index)}
-                className="relative flex flex-col items-start cursor-pointer group p-5 sm:p-6 rounded-3xl transition-all duration-300"
+                className="relative flex flex-col items-start cursor-pointer group p-5 sm:p-6 rounded-3xl transition-colors duration-300 select-none"
               >
-                {/* Smooth Moving Background Highlight (Glides between sections) */}
+                {/* Smooth Moving Background Highlight */}
                 {isActive && (
                   <motion.div
                     layoutId="activeStepCardHighlight"
-                    className="absolute inset-0 bg-[#FAF3E6] border border-[#C59B27]/50 rounded-3xl shadow-lg shadow-[#C59B27]/10 z-0"
-                    transition={{ type: "spring", stiffness: 320, damping: 32 }}
+                    className="absolute inset-0 bg-[#FAF3E6] border border-[#C59B27]/50 rounded-3xl shadow-lg shadow-[#C59B27]/10 z-0 transform-gpu"
+                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
                   />
                 )}
 
@@ -119,11 +119,10 @@ export default function RoadmapTimeline() {
                   <div className="relative mb-5">
                     <motion.div
                       animate={{ 
-                        scale: isActive ? 1.12 : 1,
-                        rotate: isActive ? [0, -5, 5, 0] : 0
+                        scale: isActive ? 1.1 : 1
                       }}
-                      transition={{ duration: 0.4 }}
-                      className={`w-14 h-14 rounded-full flex items-center justify-center relative z-10 transition-all duration-300 ${
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                      className={`w-14 h-14 rounded-full flex items-center justify-center relative z-10 transition-all duration-300 transform-gpu ${
                         isActive
                           ? 'bg-[#0C192E] border-2 border-[#C59B27] shadow-lg shadow-[#0C192E]/20'
                           : isCompleted
@@ -175,32 +174,32 @@ export default function RoadmapTimeline() {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeStep}
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-            className="p-6 rounded-2xl bg-[#0C192E] text-white border border-[#1E2D45] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl"
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="p-6 rounded-2xl bg-[#0C192E] text-white border border-[#1E2D45] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl transform-gpu"
           >
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 rounded-xl bg-[#162744] border border-[#C59B27]/40 flex items-center justify-center text-[#C59B27] shrink-0 font-serif font-bold text-sm">
-                {steps[activeStep].num}
+                {STEPS[activeStep].num}
               </div>
               <div>
                 <h4 className="text-base sm:text-lg font-serif font-bold text-white flex items-center gap-2">
-                  <span>{steps[activeStep].title}</span>
+                  <span>{STEPS[activeStep].title}</span>
                   <span className="text-xs text-[#C59B27] font-sans font-normal uppercase tracking-wider">Active Stage</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-300 mt-0.5">
-                  {steps[activeStep].desc}
+                  {STEPS[activeStep].desc}
                 </p>
               </div>
             </div>
 
             <Link
-              to={steps[activeStep].link}
+              to={STEPS[activeStep].link}
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#C59B27] hover:bg-[#d8a82c] text-[#0C192E] text-xs font-bold uppercase tracking-wider rounded-full shrink-0 transition-all shadow-md transform hover:-translate-y-0.5"
             >
-              <span>EXPLORE {steps[activeStep].title}</span>
+              <span>EXPLORE {STEPS[activeStep].title}</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </motion.div>

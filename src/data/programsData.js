@@ -315,7 +315,7 @@ export const programsData = {
     waLink: 'https://chat.whatsapp.com/',
     repLink: 'https://wa.me/917022603588',
     stats: [
-      { label: 'Duration', value: '4 - 6 Weeks' },
+      { label: 'Duration', value: '4 - 12 Weeks' },
       { label: 'Projects', value: 'Capstone Projects' },
       { label: 'Evaluation', value: 'Mentor Assessed' },
       { label: 'Credential', value: 'Verifiable Digital Badge' }

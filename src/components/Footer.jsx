@@ -13,15 +13,15 @@ export default function Footer() {
           
           {/* Column 1: Brand & Bio */}
           <div className="lg:col-span-4 space-y-4">
-            <Link to="/" className="inline-block group">
-              <span className="font-serif font-extrabold text-2xl tracking-[0.2em] text-[#C59B27] block">
-                ELEVATE
-              </span>
-            </Link>
-
-            <h4 className="text-sm font-semibold text-white tracking-wide">
-              An Initiative of AIRA Venturess Private Limited
-            </h4>
+          <Link to="/" className="flex flex-col group">
+            <div className="flex items-center space-x-1.5">
+              <span className="text-2xl font-serif font-bold text-[#C59B27] tracking-[0.25em]">ELEVATE</span>
+            </div>
+            <div className="flex items-center space-x-1 text-[9px] font-semibold text-[#556070] uppercase tracking-[0.2em] -mt-0.5">
+              <span className="h-[1px] w-8 bg-[#C59B27]"></span>
+              <span className="text-white ">BEYOND YOUR DEGREE</span>
+            </div>
+          </Link>
 
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
               A career acceleration ecosystem that connects learning, mentorship, projects and placements.
@@ -67,13 +67,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="hover:text-white transition-colors">
-                  Programs
+                <Link to="/about" className="hover:text-white transition-colors">
+                  About 
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-white transition-colors">
-                  Success Stories
+                <Link to="/products" className="hover:text-white transition-colors">
+                  Products    
                 </Link>
               </li>
               <li>
@@ -126,9 +126,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+918157941004" className="hover:text-[#C59B27] transition-colors flex items-center gap-3">
+                <a href="tel:+917022603588" className="hover:text-[#C59B27] transition-colors flex items-center gap-3">
                   <Phone className="w-4 h-4 text-[#C59B27] shrink-0" />
-                  <span>+91 8157941004</span>
+                  <span>+91 70226 03588</span>
                 </a>
               </li>
               <li>

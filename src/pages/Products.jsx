@@ -7,6 +7,7 @@ import StudentEnquiryModal from './StudentEnquiryModal';
 import career from '../assets/careerlunchpad.jpeg';
 import professional from '../assets/professional.jpeg';
 import workshop from '../assets/Workshop.jpeg';
+import Webinar from '../assets/webinar.png';
 
 
 export default function Products() {
@@ -17,7 +18,7 @@ export default function Products() {
       slug: 'webinars',
       title: 'Interactive Webinars',
       desc: 'Live expert sessions on the skills the market is hiring for. Open to students from every domain.',
-      poster: programsData.webinars.poster,
+      poster: Webinar ,
       posterTitle: 'HOW TO GET INTERNSHIPS USING AI',
       posterSub: 'Live Interactive Session',
       regLink: 'https://forms.gle/W6AZdbdbjQVxKfmE8',
