@@ -45,29 +45,22 @@ const STEP_DURATION = 1500; // Smooth 1.5s transition pacing
 
 export default function RoadmapTimeline() {
   const [activeStep, setActiveStep] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
 
-  // Auto-run animation timer (advances smoothly every 3.5 seconds)
+  // Auto-run animation timer (advances continuously)
   useEffect(() => {
-    if (isPaused) return;
-
     const timer = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % STEPS.length);
     }, STEP_DURATION);
 
     return () => clearInterval(timer);
-  }, [isPaused, activeStep]);
+  }, [activeStep]);
 
   const handleStepClick = (index) => {
     setActiveStep(index);
   };
 
   return (
-    <div 
-      className="py-6 relative"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-    >
+    <div className="py-6 relative">
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
         <div>
@@ -82,15 +75,13 @@ export default function RoadmapTimeline() {
         {/* Live Step Progress Indicator Pill */}
         <div className="mt-4 md:mt-0 inline-flex items-center gap-3 bg-[#FAF3E6] border border-[#E8D7B8] px-4 py-2 rounded-full text-xs font-semibold text-[#0C192E] shadow-sm relative overflow-hidden">
           {/* Active step timer countdown progress bar */}
-          {!isPaused && (
-            <motion.div 
-              key={`step-progress-${activeStep}`}
-              initial={{ width: '0%' }}
-              animate={{ width: '100%' }}
-              transition={{ duration: STEP_DURATION / 1000, ease: 'linear' }}
-              className="absolute bottom-0 left-0 top-0 bg-[#C59B27]/15 pointer-events-none z-0"
-            />
-          )}
+          <motion.div 
+            key={`step-progress-${activeStep}`}
+            initial={{ width: '0%' }}
+            animate={{ width: '100%' }}
+            transition={{ duration: STEP_DURATION / 1000, ease: 'linear' }}
+            className="absolute bottom-0 left-0 top-0 bg-[#C59B27]/15 pointer-events-none z-0"
+          />
           <span className="w-2.5 h-2.5 rounded-full bg-[#C59B27] animate-pulse relative z-10" />
           <span className="relative z-10">
             STEP 0{activeStep + 1} OF 05 : <strong className="text-[#C59B27] uppercase">{STEPS[activeStep].title}</strong>
