@@ -62,22 +62,22 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-xs sm:text-sm text-slate-400 font-medium">
               <li>
-                <Link to="/" className="hover:text-white transition-colors">
+                <Link to="/" className="hover:text-[#FFD700] transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-white transition-colors">
+                <Link to="/about" className="hover:text-[#FFD700] transition-colors">
                   About 
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="hover:text-white transition-colors">
+                <Link to="/products" className="hover:text-[#FFD700] transition-colors">
                   Products    
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-white transition-colors">
+                <Link to="/contact" className="hover:text-[#FFD700] transition-colors">
                   Contact
                 </Link>
               </li>
@@ -91,22 +91,22 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-xs sm:text-sm text-slate-400 font-medium">
               <li>
-                <Link to="/products" className="hover:text-white transition-colors">
+                <Link to="/products" className="hover:text-[#FFD700] transition-colors">
                   Artificial Intelligence
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="hover:text-white transition-colors">
+                <Link to="/products" className="hover:text-[#FFD700] transition-colors">
                   Cyber Security
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="hover:text-white transition-colors">
+                <Link to="/products" className="hover:text-[#FFD700] transition-colors">
                   IoT & Robotics
                 </Link>
               </li>
               <li>
-                <Link to="/products" className="hover:text-white transition-colors">
+                <Link to="/products" className="hover:text-[#FFD700] transition-colors">
                   Digital Marketing
                 </Link>
               </li>

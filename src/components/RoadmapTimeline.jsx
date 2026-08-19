@@ -41,6 +41,8 @@ const STEPS = [
   }
 ];
 
+const STEP_DURATION = 1500; // Smooth 1.5s transition pacing
+
 export default function RoadmapTimeline() {
   const [activeStep, setActiveStep] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -51,10 +53,14 @@ export default function RoadmapTimeline() {
 
     const timer = setInterval(() => {
       setActiveStep((prev) => (prev + 1) % STEPS.length);
-    }, 3500);
+    }, STEP_DURATION);
 
     return () => clearInterval(timer);
-  }, [isPaused]);
+  }, [isPaused, activeStep]);
+
+  const handleStepClick = (index) => {
+    setActiveStep(index);
+  };
 
   return (
     <div 
@@ -74,21 +80,33 @@ export default function RoadmapTimeline() {
         </div>
 
         {/* Live Step Progress Indicator Pill */}
-        <div className="mt-4 md:mt-0 inline-flex items-center gap-3 bg-[#FAF3E6] border border-[#E8D7B8] px-4 py-2 rounded-full text-xs font-semibold text-[#0C192E] shadow-sm">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#C59B27] animate-pulse"></span>
-          <span>STEP 0{activeStep + 1} OF 05 : <strong className="text-[#C59B27] uppercase">{STEPS[activeStep].title}</strong></span>
+        <div className="mt-4 md:mt-0 inline-flex items-center gap-3 bg-[#FAF3E6] border border-[#E8D7B8] px-4 py-2 rounded-full text-xs font-semibold text-[#0C192E] shadow-sm relative overflow-hidden">
+          {/* Active step timer countdown progress bar */}
+          {!isPaused && (
+            <motion.div 
+              key={`step-progress-${activeStep}`}
+              initial={{ width: '0%' }}
+              animate={{ width: '100%' }}
+              transition={{ duration: STEP_DURATION / 1000, ease: 'linear' }}
+              className="absolute bottom-0 left-0 top-0 bg-[#C59B27]/15 pointer-events-none z-0"
+            />
+          )}
+          <span className="w-2.5 h-2.5 rounded-full bg-[#C59B27] animate-pulse relative z-10" />
+          <span className="relative z-10">
+            STEP 0{activeStep + 1} OF 05 : <strong className="text-[#C59B27] uppercase">{STEPS[activeStep].title}</strong>
+          </span>
         </div>
       </div>
 
       {/* Timeline Flow Container */}
       <div className="relative pt-2">
         {/* Horizontal Connecting Line (Desktop) */}
-        <div className="hidden lg:block absolute top-[48px] left-[8%] right-[8%] h-[2px] bg-[#E2D6C1] z-0">
+        <div className="hidden lg:block absolute top-[48px] left-[8%] right-[8%] h-[2px] bg-[#E2D6C1] z-0 overflow-hidden">
           <motion.div 
             className="h-full bg-gradient-to-r from-[#C59B27] via-[#D8982D] to-[#C59B27] rounded-full shadow-[0_0_10px_rgba(197,155,39,0.5)] transform-gpu"
             initial={{ width: '0%' }}
             animate={{ width: `${(activeStep / (STEPS.length - 1)) * 100}%` }}
-            transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
+            transition={{ duration: 0.7, ease: [0.25, 1, 0.5, 1] }}
           />
         </div>
 
@@ -102,7 +120,7 @@ export default function RoadmapTimeline() {
             return (
               <div
                 key={step.num}
-                onClick={() => setActiveStep(index)}
+                onClick={() => handleStepClick(index)}
                 className="relative flex flex-col items-start cursor-pointer group p-5 sm:p-6 rounded-3xl transition-colors duration-300 select-none"
               >
                 {/* Smooth Moving Background Highlight */}
@@ -110,7 +128,7 @@ export default function RoadmapTimeline() {
                   <motion.div
                     layoutId="activeStepCardHighlight"
                     className="absolute inset-0 bg-[#FAF3E6] border border-[#C59B27]/50 rounded-3xl shadow-lg shadow-[#C59B27]/10 z-0 transform-gpu"
-                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                    transition={{ type: "spring", stiffness: 260, damping: 26 }}
                   />
                 )}
 
@@ -121,7 +139,7 @@ export default function RoadmapTimeline() {
                       animate={{ 
                         scale: isActive ? 1.1 : 1
                       }}
-                      transition={{ duration: 0.3, ease: "easeOut" }}
+                      transition={{ duration: 0.35, ease: [0.25, 1, 0.5, 1] }}
                       className={`w-14 h-14 rounded-full flex items-center justify-center relative z-10 transition-all duration-300 transform-gpu ${
                         isActive
                           ? 'bg-[#0C192E] border-2 border-[#C59B27] shadow-lg shadow-[#0C192E]/20'
@@ -143,21 +161,21 @@ export default function RoadmapTimeline() {
                   </div>
 
                   {/* Step Number */}
-                  <span className={`text-xs font-serif block mb-1.5 tracking-[0.2em] transition-colors ${
+                  <span className={`text-xs font-serif block mb-1.5 tracking-[0.2em] transition-colors duration-300 ${
                     isActive ? 'text-[#C59B27] font-bold' : 'text-[#C59B27]/80'
                   }`}>
                     {step.num}
                   </span>
 
                   {/* Title */}
-                  <h3 className={`text-lg sm:text-xl font-serif mb-2.5 leading-snug transition-colors ${
+                  <h3 className={`text-lg sm:text-xl font-serif mb-2.5 leading-snug transition-colors duration-300 ${
                     isActive ? 'text-[#0C192E] font-bold' : 'text-[#0C192E]'
                   }`}>
                     {step.title}
                   </h3>
 
                   {/* Description */}
-                  <p className={`text-xs sm:text-sm leading-relaxed transition-colors ${
+                  <p className={`text-xs sm:text-sm leading-relaxed transition-colors duration-300 ${
                     isActive ? 'text-slate-700 font-medium' : 'text-slate-600'
                   }`}>
                     {step.desc}
@@ -170,14 +188,14 @@ export default function RoadmapTimeline() {
       </div>
 
       {/* Smooth Animated Active Detail Banner at Bottom */}
-      <div className="mt-8">
-        <AnimatePresence mode="wait">
+      <div className="mt-8 relative overflow-hidden min-h-[100px]">
+        <AnimatePresence mode="popLayout">
           <motion.div
             key={activeStep}
-            initial={{ opacity: 0, y: 6 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -6 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.35, ease: [0.25, 1, 0.5, 1] }}
             className="p-6 rounded-2xl bg-[#0C192E] text-white border border-[#1E2D45] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl transform-gpu"
           >
             <div className="flex items-center gap-4">
@@ -208,3 +226,4 @@ export default function RoadmapTimeline() {
     </div>
   );
 }
+
