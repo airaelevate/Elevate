@@ -7,7 +7,7 @@ export default function Contact() {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#FAF6F0] text-slate-800 pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 lg:pb-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#FBF5E9] text-slate-800 pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 lg:pb-20 overflow-x-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
