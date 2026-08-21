@@ -85,39 +85,39 @@ export default function StudentEnquiryModal({ isOpen, onClose }) {
 
   return (
     <div 
-      className="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-[#0C192E]/70 backdrop-blur-md transition-opacity duration-300"
+      className="fixed inset-0 z-[99999] flex items-center justify-center p-3 sm:p-4 bg-[#0C192E]/75 backdrop-blur-md transition-opacity duration-300 overflow-y-auto"
       onClick={onClose}
     >
       {/* Main Modal Card */}
       <div 
-        className="relative max-w-4xl w-full flex flex-col md:flex-row bg-[#FAF6F0] rounded-3xl overflow-hidden shadow-2xl border border-[#EAE1D0] transition-all duration-300"
+        className="relative max-w-4xl w-full flex flex-col md:flex-row bg-[#FAF6F0] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-[#EAE1D0] transition-all duration-300 max-h-[90vh] md:max-h-[85vh] my-auto overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         
         {/* Dynamic Close Button */}
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 z-50 p-2.5 rounded-full bg-white/80 border border-[#EAE1D0] text-slate-600 hover:text-[#0C192E] hover:border-[#C59B27] transition-all group focus:outline-none cursor-pointer shadow-sm"
+          className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 z-50 p-2 sm:p-2.5 rounded-full bg-white/80 border border-[#EAE1D0] text-slate-600 hover:text-[#0C192E] hover:border-[#C59B27] transition-all group focus:outline-none cursor-pointer shadow-sm"
           aria-label="Close modal"
         >
-          <X className="w-5 h-5 transform group-hover:rotate-90 transition-transform duration-300" />
+          <X className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:rotate-90 transition-transform duration-300" />
         </button>
 
         {/* Left Column: Brand Panel */}
-        <div className="w-full md:w-[42%] bg-[#0C192E] text-white p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden min-h-[220px] md:min-h-[500px] border-b md:border-b-0 md:border-r border-[#1E2D45]">
+        <div className="w-full md:w-[42%] bg-[#0C192E] text-white p-6 sm:p-8 lg:p-10 flex flex-col justify-between relative overflow-hidden min-h-[180px] md:min-h-[480px] border-b md:border-b-0 md:border-r border-[#1E2D45] shrink-0">
           <div className="absolute top-[-20%] left-[-20%] w-64 h-64 bg-[#C59B27]/15 rounded-full blur-[80px] pointer-events-none" />
           <div className="absolute bottom-[-10%] right-[-10%] w-48 h-48 bg-[#C59B27]/10 rounded-full blur-[60px] pointer-events-none" />
 
           {/* Graphic & Text */}
-          <div className="my-auto space-y-6 relative z-10">
-            <div className="w-14 h-14 rounded-2xl bg-[#162744] border border-[#C59B27]/40 flex items-center justify-center text-[#C59B27] shadow-lg">
-              <BookOpen className="w-7 h-7" />
+          <div className="my-auto space-y-4 sm:space-y-6 relative z-10">
+            <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-[#162744] border border-[#C59B27]/40 flex items-center justify-center text-[#C59B27] shadow-lg">
+              <BookOpen className="w-5 h-5 sm:w-7 sm:h-7" />
             </div>
-            <div className="space-y-3 text-left">
-              <span className="text-[11px] font-bold text-[#C59B27] uppercase tracking-[0.25em] block">
+            <div className="space-y-2 sm:space-y-3 text-left">
+              <span className="text-[10px] sm:text-[11px] font-bold text-[#C59B27] uppercase tracking-[0.25em] block">
                 STUDENT ENQUIRY
               </span>
-              <h3 className="text-2xl sm:text-3xl font-bold font-serif text-white tracking-tight leading-tight">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold font-serif text-white tracking-tight leading-tight">
                 Elevate Your <span className="text-[#C59B27] font-serif font-normal">Career</span>
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
@@ -126,16 +126,16 @@ export default function StudentEnquiryModal({ isOpen, onClose }) {
             </div>
           </div>
 
-          <div className="text-[10px] text-slate-400 tracking-widest uppercase hidden md:block font-semibold">
+          <div className="text-[10px] text-slate-400 tracking-widest uppercase hidden md:block font-semibold pt-4">
             © AIRA ELEVATE LEARNING ECOSYSTEM
           </div>
         </div>
 
         {/* Right Column: Form Panel */}
-        <div className="w-full md:w-[58%] p-8 sm:p-10 relative flex flex-col justify-center bg-white">
+        <div className="w-full md:w-[58%] p-6 sm:p-8 lg:p-10 relative flex flex-col justify-center bg-white overflow-y-auto">
           
           {submitted ? (
-            <div className="text-center space-y-4 py-12">
+            <div className="text-center space-y-4 py-8 sm:py-12">
               <div className="w-16 h-16 bg-[#FAF3E6] text-[#C59B27] border border-[#E8D7B8] rounded-full flex items-center justify-center mx-auto shadow-md">
                 <CheckCircle2 className="w-8 h-8 animate-bounce" />
               </div>

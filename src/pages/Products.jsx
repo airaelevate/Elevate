@@ -64,15 +64,15 @@ export default function Products() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FBF5E9] text-slate-800 pt-28 pb-20">
+    <div className="min-h-screen bg-[#FBF5E9] text-slate-800 pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 lg:pb-20 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Intro */}
-        <section className="mb-16">
+        <section className="mb-10 sm:mb-16">
           <motion.div 
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-xs uppercase tracking-[0.25em] text-[#C59B27] font-semibold mb-3"
+            className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#C59B27] font-semibold mb-3 block"
           >
             OUR PRODUCTS
           </motion.div>
@@ -80,7 +80,7 @@ export default function Products() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl sm:text-6xl font-serif text-[#0C192E] leading-tight tracking-tight"
+            className="text-3xl sm:text-5xl lg:text-6xl font-serif text-[#0C192E] leading-[1.15] sm:leading-tight tracking-tight"
           >
             Four ways to get <span className="text-[#C59B27] font-serif font-normal">industry ready</span>
           </motion.h1>
@@ -88,14 +88,14 @@ export default function Products() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mt-4 text-slate-600 text-sm sm:text-base max-w-2xl leading-relaxed"
+            className="mt-4 text-slate-600 text-xs sm:text-base max-w-2xl leading-relaxed"
           >
             Explore our webinars, workshops, value-added certification courses, and placement assistance programs below. Click any program to see upcoming batches, session posters, and registration details.
           </motion.p>
         </section>
 
         {/* Product Cards Stack */}
-        <div className="space-y-16 sm:space-y-24">
+        <div className="space-y-12 sm:space-y-20 lg:space-y-24">
           {products.map((prod, idx) => {
             const isPosterRight = idx % 2 === 1;
             const programPath = `/program/${prod.slug}`;
@@ -107,26 +107,26 @@ export default function Products() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
+                className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center"
               >
                 {/* Poster Graphic Container */}
                 <div className={`lg:col-span-5 ${isPosterRight ? 'lg:order-2' : 'lg:order-1'}`}>
                   <Link to={programPath} className="block group">
-                    <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-gradient-to-br from-[#0C192E] to-[#162744]">
+                    <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border-2 sm:border-4 border-white bg-gradient-to-br from-[#0C192E] to-[#162744]">
                       <img 
                         src={prod.poster} 
                         alt={prod.posterTitle}
-                        className="w-full h-[620px] sm:h-[600px] object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" 
+                        className="w-full h-[280px] xs:h-[340px] sm:h-[450px] lg:h-[550px] xl:h-[600px] object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" 
                       />
                       <div className="absolute inset-0 bg-[#0C192E]/20 group-hover:bg-transparent transition-colors"></div>
                       
                       {/* Click overlay badge */}
-                      <div className="absolute bottom-6 left-6 right-6 bg-[#0C192E]/90 backdrop-blur-md p-4 rounded-2xl border border-[#C59B27]/30 text-white flex items-center justify-between opacity-95 group-hover:opacity-100 transition-opacity">
-                        <div>
-                          <span className="text-[10px] font-bold text-[#C59B27] uppercase tracking-widest block">VIEW UPCOMING BATCHES</span>
-                          <span className="text-sm font-serif font-bold">{prod.posterTitle}</span>
+                      <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 bg-[#0C192E]/90 backdrop-blur-md p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-[#C59B27]/30 text-white flex items-center justify-between opacity-95 group-hover:opacity-100 transition-opacity">
+                        <div className="overflow-hidden pr-2">
+                          <span className="text-[9px] sm:text-[10px] font-bold text-[#C59B27] uppercase tracking-widest block truncate">VIEW UPCOMING BATCHES</span>
+                          <span className="text-xs sm:text-sm font-serif font-bold truncate block">{prod.posterTitle}</span>
                         </div>
-                        <ArrowRight className="w-5 h-5 text-[#C59B27] group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#C59B27] shrink-0 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
                   </Link>
@@ -134,29 +134,29 @@ export default function Products() {
 
                 {/* Content & Action Buttons */}
                 <div className={`lg:col-span-7 flex flex-col justify-center ${isPosterRight ? 'lg:order-1' : 'lg:order-2'}`}>
-                  <span className="text-xs uppercase tracking-[0.2em] font-bold text-[#C59B27] block mb-2">
+                  <span className="text-xs uppercase tracking-[0.2em] font-bold text-[#C59B27] block mb-1.5 sm:mb-2">
                     {prod.id}
                   </span>
 
                   <Link to={programPath} className="group">
-                    <h3 className="text-3xl sm:text-4xl font-serif font-bold text-[#0C192E] mb-4 group-hover:text-[#C59B27] transition-colors">
+                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-[#0C192E] mb-3 sm:mb-4 group-hover:text-[#C59B27] transition-colors leading-tight">
                       {prod.title}
                     </h3>
                   </Link>
 
-                  <p className="text-slate-600 text-base leading-relaxed mb-8 max-w-xl">
+                  <p className="text-slate-600 text-xs sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-xl">
                     {prod.desc}
                   </p>
 
                   {/* 3 Action Buttons */}
-                  <div className="flex flex-wrap gap-3 items-center">
+                  <div className="flex flex-col sm:flex-row flex-wrap gap-3 items-stretch sm:items-center">
                     {/* Register Now / Details Page */}
                     <Link
                       to={programPath}
-                      className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#0C192E] hover:bg-[#C59B27] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-md transition-all transform hover:-translate-y-0.5"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#0C192E] hover:bg-[#C59B27] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-md transition-all transform hover:-translate-y-0.5 text-center"
                     >
-                      REGISTER NOW & DETAILS
-                      <ArrowRight className="h-4 w-4" />
+                      <span>REGISTER NOW & DETAILS</span>
+                      <ArrowRight className="h-4 w-4 shrink-0" />
                     </Link>
 
                     {/* Contact Rep */}
@@ -164,19 +164,19 @@ export default function Products() {
                       href={prod.repLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3.5 bg-transparent border-2 border-[#C59B27] hover:bg-[#C59B27]/10 text-[#C59B27] text-xs font-bold uppercase tracking-wider rounded-full transition-all"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-transparent border-2 border-[#C59B27] hover:bg-[#C59B27]/10 text-[#C59B27] text-xs font-bold uppercase tracking-wider rounded-full transition-all text-center"
                     >
-                      <MessageCircle className="h-4 w-4" />
-                      REPRESENTATIVE
+                      <MessageCircle className="h-4 w-4 shrink-0" />
+                      <span>REPRESENTATIVE</span>
                     </a>
 
                     {/* Student Enquiry Modal Trigger */}
                     <button
                       onClick={() => setIsModalOpen(true)}
-                      className="inline-flex items-center gap-2 px-5 py-3.5 bg-white border border-[#EAE1D0] hover:border-[#C59B27] text-slate-700 hover:text-[#0C192E] text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow-sm cursor-pointer"
+                      className="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-white border border-[#EAE1D0] hover:border-[#C59B27] text-slate-700 hover:text-[#0C192E] text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow-sm cursor-pointer text-center"
                     >
-                      <HelpCircle className="h-4 w-4 text-[#C59B27]" />
-                      KNOW MORE
+                      <HelpCircle className="h-4 w-4 text-[#C59B27] shrink-0" />
+                      <span>KNOW MORE</span>
                     </button>
                   </div>
                 </div>

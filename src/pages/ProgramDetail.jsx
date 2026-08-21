@@ -67,28 +67,28 @@ export default function ProgramDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FAF6F0] text-slate-800 pt-28 pb-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#FAF6F0] text-slate-800 pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 lg:pb-20 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Back Link & Breadcrumb */}
-        <div className="mb-8 flex items-center justify-between">
+        <div className="mb-6 sm:mb-8 flex flex-wrap items-center justify-between gap-3">
           <Link
             to="/products"
             className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#C59B27] hover:text-[#0C192E] transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            BACK TO ALL PROGRAMS
+            <span>BACK TO ALL PROGRAMS</span>
           </Link>
 
           <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
             <Link to="/products" className="hover:underline">Products</Link>
             <ChevronRight className="w-3 h-3 text-slate-400" />
-            <span className="text-[#0C192E] font-bold">{programCategory.title}</span>
+            <span className="text-[#0C192E] font-bold truncate max-w-[160px] sm:max-w-none">{programCategory.title}</span>
           </div>
         </div>
 
         {/* HERO SECTION */}
-        <section className="mb-20">
+        <section className="mb-12 sm:mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Content */}
@@ -98,27 +98,27 @@ export default function ProgramDetail() {
               transition={{ duration: 0.6 }}
               className="lg:col-span-7 flex flex-col justify-center"
             >
-              <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#C59B27] font-bold mb-3 bg-[#FAF3E6] px-3 py-1 rounded-full border border-[#E8D7B8] w-fit">
+              <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#C59B27] font-bold mb-3 bg-[#FAF3E6] px-3 py-1 rounded-full border border-[#E8D7B8] w-fit">
                 <Sparkles className="w-3.5 h-3.5" />
-                {programCategory.tagline}
+                <span>{programCategory.tagline}</span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#0C192E] leading-tight tracking-tight mb-6">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif text-[#0C192E] leading-[1.15] sm:leading-tight tracking-tight mb-4 sm:mb-6">
                 {programCategory.heroTitle}
               </h1>
 
-              <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
+              <p className="text-slate-600 text-xs sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-2xl">
                 {programCategory.heroDesc}
               </p>
 
               {/* Category Key Stats Chips */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
                 {programCategory.stats.map((stat, idx) => (
-                  <div key={idx} className="bg-white p-3.5 rounded-2xl border border-[#EAE1D0] shadow-sm hover:scale-110 transition-transform duration-300 cursor-pointer hover:bg-[#FAF3E6]">
-                    <span className="text-[11px] text-slate-500 block uppercase font-medium tracking-wider">
+                  <div key={idx} className="bg-white p-3 sm:p-3.5 rounded-xl sm:rounded-2xl border border-[#EAE1D0] shadow-sm hover:scale-105 transition-transform duration-300 cursor-pointer hover:bg-[#FAF3E6]">
+                    <span className="text-[10px] sm:text-[11px] text-slate-500 block uppercase font-medium tracking-wider truncate">
                       {stat.label}
                     </span>
-                    <strong className="text-sm font-serif font-bold text-[#0C192E] mt-0.5 block">
+                    <strong className="text-xs sm:text-sm font-serif font-bold text-[#0C192E] mt-0.5 block truncate">
                       {stat.value}
                     </strong>
                   </div>
@@ -126,33 +126,33 @@ export default function ProgramDetail() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap gap-4 items-center">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 items-stretch sm:items-center">
                 <button
                   onClick={() => handleOpenRegister(null)}
-                  className="inline-flex items-center gap-2.5 px-8 py-3.5 bg-[#0C192E] hover:bg-[#C59B27] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-[#0C192E] hover:bg-[#C59B27] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 text-center"
                 >
-                  REGISTER NOW
-                  <ExternalLink className="h-4 w-4" />
+                  <span>REGISTER NOW</span>
+                  <ExternalLink className="h-4 w-4 shrink-0" />
                 </button>
 
                 <a
                   href={programCategory.waLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-transparent border-2 border-[#C59B27] hover:bg-[#C59B27]/10 text-[#C59B27] text-xs font-bold uppercase tracking-wider rounded-full transition-all"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-transparent border-2 border-[#C59B27] hover:bg-[#C59B27]/10 text-[#C59B27] text-xs font-bold uppercase tracking-wider rounded-full transition-all text-center"
                 >
-                  <MessageCircle className="h-4 w-4" />
-                   REPRESENTATIVE
+                  <MessageCircle className="h-4 w-4 shrink-0" />
+                  <span>REPRESENTATIVE</span>
                 </a>
 
-                    {/* Student Enquiry Modal Trigger */}
-                    <button
-                      onClick={() => setIsModalOpen(true)}
-                      className="inline-flex items-center gap-2 px-5 py-3.5 bg-white border border-[#EAE1D0] hover:border-[#C59B27] text-slate-700 hover:text-[#0C192E] text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow-sm cursor-pointer"
-                    >
-                      <HelpCircle className="h-4 w-4 text-[#C59B27]" />
-                      KNOW MORE
-                    </button>
+                {/* Student Enquiry Modal Trigger */}
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-white border border-[#EAE1D0] hover:border-[#C59B27] text-slate-700 hover:text-[#0C192E] text-xs font-bold uppercase tracking-wider rounded-full transition-all shadow-sm cursor-pointer text-center"
+                >
+                  <HelpCircle className="h-4 w-4 text-[#C59B27] shrink-0" />
+                  <span>KNOW MORE</span>
+                </button>
               </div>
             </motion.div>
 
@@ -161,26 +161,26 @@ export default function ProgramDetail() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:col-span-5"
+              className="lg:col-span-5 mt-6 lg:mt-0"
             >
               <div 
                 onClick={() => setLightboxImage({ src: programCategory.poster, title: programCategory.posterTitle || programCategory.title })}
-                className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#0C192E] group cursor-pointer"
+                className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-2 sm:border-4 border-white bg-[#0C192E] group cursor-pointer"
               >
                 <img 
                   src={programCategory.poster} 
                   alt={programCategory.title}
-                  className="w-full h-[450px] sm:h-[520px] object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" 
+                  className="w-full h-[260px] xs:h-[320px] sm:h-[440px] lg:h-[500px] object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" 
                 />
                 <div className="absolute inset-0 bg-[#0C192E]/20 group-hover:bg-transparent transition-colors"></div>
                 
                 {/* Poster Badge */}
-                <div className="absolute top-4 left-4 bg-[#0C192E]/90 backdrop-blur-md border border-[#C59B27]/40 px-4 py-2 rounded-2xl text-white">
-                  <span className="text-[10px] uppercase font-bold text-[#C59B27] tracking-widest block">OFFICIAL BROCHURE</span>
-                  <span className="text-xs font-serif font-bold">{programCategory.posterTitle || programCategory.title}</span>
+                <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-[#0C192E]/90 backdrop-blur-md border border-[#C59B27]/40 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl sm:rounded-2xl text-white max-w-[80%]">
+                  <span className="text-[9px] sm:text-[10px] uppercase font-bold text-[#C59B27] tracking-widest block truncate">OFFICIAL BROCHURE</span>
+                  <span className="text-xs font-serif font-bold truncate block">{programCategory.posterTitle || programCategory.title}</span>
                 </div>
 
-                <div className="absolute bottom-4 right-4 bg-[#0C192E]/90 backdrop-blur-md text-[#C59B27] text-xs font-bold px-3 py-1.5 rounded-full border border-[#C59B27]/30 flex items-center gap-1.5">
+                <div className="absolute bottom-3 sm:bottom-4 right-3 sm:right-4 bg-[#0C192E]/90 backdrop-blur-md text-[#C59B27] text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full border border-[#C59B27]/30 flex items-center gap-1.5">
                   <span>Click to view poster</span>
                 </div>
               </div>
@@ -190,23 +190,23 @@ export default function ProgramDetail() {
         </section>
 
         {/* LIST & BATCH SCHEDULE WITH UPCOMING / COMPLETED TABS */}
-        <section className="py-12 border-t border-[#EAE1D0]">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <section className="py-8 sm:py-12 border-t border-[#EAE1D0]">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4">
             <div>
-              <span className="text-xs uppercase tracking-[0.25em] text-[#C59B27] font-semibold block mb-2">
+              <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#C59B27] font-semibold block mb-1.5 sm:mb-2">
                 SCHEDULE & BROCHURES
               </span>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#0C192E]">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-[#0C192E] leading-snug">
                 {programCategory.title} <span className="text-[#C59B27] font-normal italic">Batches & Details</span>
               </h2>
             </div>
 
             {/* Filter Tabs */}
             {(upcomingItems.length > 0 || completedItems.length > 0) && (
-              <div className="flex items-center gap-2 bg-white p-1.5 rounded-2xl border border-[#EAE1D0] shadow-sm shrink-0">
+              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 bg-white p-1.5 rounded-xl sm:rounded-2xl border border-[#EAE1D0] shadow-sm shrink-0 w-full sm:w-auto">
                 <button
                   onClick={() => setWebinarFilter('upcoming')}
-                  className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all ${
+                  className={`px-3 sm:px-4 py-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-lg sm:rounded-xl transition-all ${
                     webinarFilter === 'upcoming'
                       ? 'bg-[#0C192E] text-white shadow-md'
                       : 'text-slate-600 hover:text-[#0C192E] hover:bg-slate-100'
@@ -216,7 +216,7 @@ export default function ProgramDetail() {
                 </button>
                 <button
                   onClick={() => setWebinarFilter('completed')}
-                  className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all ${
+                  className={`px-3 sm:px-4 py-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-lg sm:rounded-xl transition-all ${
                     webinarFilter === 'completed'
                       ? 'bg-[#0C192E] text-white shadow-md'
                       : 'text-slate-600 hover:text-[#0C192E] hover:bg-slate-100'
@@ -226,7 +226,7 @@ export default function ProgramDetail() {
                 </button>
                 <button
                   onClick={() => setWebinarFilter('all')}
-                  className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition-all ${
+                  className={`px-3 sm:px-4 py-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-lg sm:rounded-xl transition-all ${
                     webinarFilter === 'all'
                       ? 'bg-[#0C192E] text-white shadow-md'
                       : 'text-slate-600 hover:text-[#0C192E] hover:bg-slate-100'
@@ -382,15 +382,15 @@ export default function ProgramDetail() {
         </section>
 
         {/* SUPPORT / CONTACT CTA BANNER */}
-        <section className="py-12 mt-12 bg-[#0C192E] rounded-3xl p-8 sm:p-12 text-white border border-[#1E2D45] flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+        <section className="py-8 sm:py-12 mt-8 sm:mt-12 bg-[#0C192E] rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 text-white border border-[#1E2D45] flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6 sm:gap-8 shadow-2xl">
           <div>
-            <span className="text-xs uppercase tracking-[0.25em] text-[#C59B27] font-semibold block mb-2">
+            <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#C59B27] font-semibold block mb-1.5 sm:mb-2">
               HAVE QUESTIONS OR COLLEGE INQUIRIES?
             </span>
-            <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-2">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-serif font-bold text-white mb-2 leading-tight">
               Connect with an Elevate Representative
             </h3>
-            <p className="text-slate-300 text-sm max-w-xl">
+            <p className="text-slate-300 text-xs sm:text-sm max-w-xl leading-relaxed">
               Want to organize custom workshops or webinars for your department or college campus? Get in touch with our program leads directly.
             </p>
           </div>
@@ -399,10 +399,10 @@ export default function ProgramDetail() {
             href={programCategory.repLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3.5 bg-[#C59B27] hover:bg-amber-500 text-[#0C192E] font-bold text-xs uppercase tracking-wider rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 shrink-0 flex items-center gap-2"
+            className="px-6 sm:px-8 py-3.5 bg-[#C59B27] hover:bg-amber-500 text-[#0C192E] font-bold text-xs uppercase tracking-wider rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 shrink-0 flex items-center justify-center gap-2 text-center"
           >
-            <HelpCircle className="w-4 h-4" />
-            CONTACT REPRESENTATIVE
+            <HelpCircle className="w-4 h-4 shrink-0" />
+            <span>CONTACT REPRESENTATIVE</span>
           </a>
         </section>
 
@@ -411,30 +411,31 @@ export default function ProgramDetail() {
       {/* LIGHTBOX BROCHURE MODAL */}
       <AnimatePresence>
         {lightboxImage && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/90 backdrop-blur-md">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className="relative max-w-4xl max-h-[90vh] bg-[#0C192E] rounded-3xl overflow-hidden border border-[#C59B27]/40 shadow-2xl flex flex-col"
+              className="relative max-w-4xl max-h-[90vh] bg-[#0C192E] rounded-2xl sm:rounded-3xl overflow-hidden border border-[#C59B27]/40 shadow-2xl flex flex-col w-full"
             >
-              <div className="p-4 bg-[#0C192E] border-b border-[#1E2D45] flex items-center justify-between text-white">
-                <div>
-                  <h4 className="text-sm font-serif font-bold text-[#C59B27]">{lightboxImage.title}</h4>
-                  {lightboxImage.date && <p className="text-xs text-slate-400">{lightboxImage.date}</p>}
+              <div className="p-3.5 sm:p-4 bg-[#0C192E] border-b border-[#1E2D45] flex items-center justify-between text-white">
+                <div className="overflow-hidden pr-2">
+                  <h4 className="text-xs sm:text-sm font-serif font-bold text-[#C59B27] truncate">{lightboxImage.title}</h4>
+                  {lightboxImage.date && <p className="text-[11px] text-slate-400 truncate">{lightboxImage.date}</p>}
                 </div>
                 <button
                   onClick={() => setLightboxImage(null)}
-                  className="p-1.5 rounded-full hover:bg-slate-800 text-slate-400 hover:text-white transition-colors"
+                  className="p-1.5 rounded-full hover:bg-slate-800 text-slate-400 hover:text-white transition-colors shrink-0"
+                  aria-label="Close modal"
                 >
-                  <X className="w-6 h-6" />
+                  <X className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
               </div>
               <div className="p-2 overflow-auto max-h-[78vh] flex items-center justify-center">
                 <img
                   src={lightboxImage.src}
                   alt={lightboxImage.title}
-                  className="max-h-[75vh] w-auto object-contain rounded-2xl shadow-lg"
+                  className="max-h-[75vh] w-auto object-contain rounded-xl sm:rounded-2xl shadow-lg"
                 />
               </div>
             </motion.div>
@@ -445,12 +446,12 @@ export default function ProgramDetail() {
       {/* REGISTRATION MODAL */}
       <AnimatePresence>
         {isModalOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/75 backdrop-blur-sm">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/75 backdrop-blur-sm overflow-y-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-[#EAE1D0] relative overflow-hidden"
+              className="bg-white rounded-2xl sm:rounded-3xl max-w-lg w-full p-5 sm:p-8 shadow-2xl border border-[#EAE1D0] relative overflow-hidden my-auto max-h-[90vh] overflow-y-auto"
             >
               {/* Close Button */}
               <button

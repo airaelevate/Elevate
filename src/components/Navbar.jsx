@@ -37,24 +37,24 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-[#FAF6F0]/90 backdrop-blur-md border-b border-[#EAE1D0] py-3 shadow-sm' 
-        : 'bg-[#FAF6F0]/80 backdrop-blur-sm py-4 border-b border-[#EAE1D0]/60'
+        ? 'bg-[#FAF6F0]/90 backdrop-blur-md border-b border-[#EAE1D0] py-2.5 sm:py-3 shadow-sm' 
+        : 'bg-[#FAF6F0]/80 backdrop-blur-sm py-3 sm:py-4 border-b border-[#EAE1D0]/60'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex flex-col group">
+          <Link to="/" className="flex flex-col group shrink-0">
             <div className="flex items-center space-x-1.5">
-              <span className="text-2xl font-serif font-bold text-[#C59B27] tracking-[0.25em]">ELEVATE</span>
+              <span className="text-xl sm:text-2xl font-serif font-bold text-[#C59B27] tracking-[0.18em] sm:tracking-[0.25em]">ELEVATE</span>
             </div>
-            <div className="flex items-center space-x-1 text-[9px] font-semibold text-[#556070] uppercase tracking-[0.2em] -mt-0.5">
-              <span className="h-[1px] w-8 bg-[#C59B27]"></span>
-              <span className="text-GRAY-900 ">BEYOND YOUR DEGREE</span>
+            <div className="flex items-center space-x-1 text-[8px] sm:text-[9px] font-semibold text-[#556070] uppercase tracking-[0.15em] sm:tracking-[0.2em] -mt-0.5">
+              <span className="h-[1px] w-6 sm:w-8 bg-[#C59B27]"></span>
+              <span className="text-slate-800 font-bold">BEYOND YOUR DEGREE</span>
             </div>
           </Link>
 
           {/* Desktop Navigation & Call to Action (Right Aligned) */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
               return (
@@ -79,7 +79,7 @@ export default function Navbar() {
 
             <Link 
               to="/products" 
-              className="inline-flex items-center justify-center px-6 py-2.5 bg-[#0C192E] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-sm hover:bg-[#162744] hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 ml-2"
+              className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 bg-[#0C192E] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-sm hover:bg-[#162744] hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 ml-2"
             >
               JOIN A BATCH
             </Link>
@@ -89,9 +89,10 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-700 hover:text-[#0C192E] focus:outline-none p-2 rounded-lg bg-white border border-[#EAE1D0]"
+              className="text-slate-700 hover:text-[#0C192E] focus:outline-none p-2 rounded-xl bg-white border border-[#EAE1D0] shadow-sm"
+              aria-label="Toggle navigation menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6 text-[#0C192E]" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6 text-[#0C192E]" />}
             </button>
           </div>
         </div>
@@ -104,7 +105,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#FAF6F0] border-b border-[#EAE1D0]"
+            className="md:hidden bg-[#FAF6F0] border-b border-[#EAE1D0] shadow-lg"
           >
             <div className="px-4 pt-3 pb-6 space-y-2 text-center">
               {navLinks.map((link) => {
@@ -113,9 +114,9 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`block px-3 py-2.5 rounded-lg text-base font-medium transition-all ${
+                    className={`block px-4 py-3 rounded-xl text-base font-medium transition-all ${
                       isActive 
-                        ? 'bg-[#0C192E] text-white font-semibold' 
+                        ? 'bg-[#0C192E] text-white font-bold shadow-sm' 
                         : 'text-slate-700 hover:bg-[#F3ECE0]'
                     }`}
                   >
@@ -126,7 +127,7 @@ export default function Navbar() {
               <div className="pt-3">
                 <Link
                   to="/products"
-                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-[#0C192E] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-md hover:bg-[#162744] transition-all"
+                  className="w-full inline-flex items-center justify-center px-6 py-3.5 bg-[#0C192E] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-md hover:bg-[#162744] transition-all"
                 >
                   JOIN A BATCH
                 </Link>

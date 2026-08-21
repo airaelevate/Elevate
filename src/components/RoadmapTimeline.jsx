@@ -60,20 +60,20 @@ export default function RoadmapTimeline() {
   };
 
   return (
-    <div className="py-6 relative">
+    <div className="py-6 sm:py-8 relative">
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
         <div>
-          <span className="text-xs uppercase tracking-[0.25em] text-[#C59B27] font-semibold block mb-2">
+          <span className="text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#C59B27] font-semibold block mb-2">
             THE STUDENT ROADMAP
           </span>
-          <h2 className="text-3xl sm:text-5xl font-serif text-[#0C192E] tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif text-[#0C192E] tracking-tight leading-tight">
             Five steps. <span className="text-[#C59B27] font-normal">One continuous journey.</span>
           </h2>
         </div>
 
         {/* Live Step Progress Indicator Pill */}
-        <div className="mt-4 md:mt-0 inline-flex items-center gap-3 bg-[#FAF3E6] border border-[#E8D7B8] px-4 py-2 rounded-full text-xs font-semibold text-[#0C192E] shadow-sm relative overflow-hidden">
+        <div className="mt-2 md:mt-0 inline-flex items-center gap-2.5 sm:gap-3 bg-[#FAF3E6] border border-[#E8D7B8] px-3.5 sm:px-4 py-2 rounded-full text-[11px] sm:text-xs font-semibold text-[#0C192E] shadow-sm relative overflow-hidden max-w-full shrink-0 self-start md:self-auto">
           {/* Active step timer countdown progress bar */}
           <motion.div 
             key={`step-progress-${activeStep}`}
@@ -82,8 +82,8 @@ export default function RoadmapTimeline() {
             transition={{ duration: STEP_DURATION / 1000, ease: 'linear' }}
             className="absolute bottom-0 left-0 top-0 bg-[#C59B27]/15 pointer-events-none z-0"
           />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#C59B27] animate-pulse relative z-10" />
-          <span className="relative z-10">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#C59B27] animate-pulse relative z-10 shrink-0" />
+          <span className="relative z-10 truncate">
             STEP 0{activeStep + 1} OF 05 : <strong className="text-[#C59B27] uppercase">{STEPS[activeStep].title}</strong>
           </span>
         </div>
@@ -91,8 +91,8 @@ export default function RoadmapTimeline() {
 
       {/* Timeline Flow Container */}
       <div className="relative pt-2">
-        {/* Horizontal Connecting Line (Desktop) */}
-        <div className="hidden lg:block absolute top-[48px] left-[8%] right-[8%] h-[2px] bg-[#E2D6C1] z-0 overflow-hidden">
+        {/* Horizontal Connecting Line (Desktop lg+) */}
+        <div className="hidden lg:block absolute top-[52px] left-[8%] right-[8%] h-[2px] bg-[#E2D6C1] z-0 overflow-hidden">
           <motion.div 
             className="h-full bg-gradient-to-r from-[#C59B27] via-[#D8982D] to-[#C59B27] rounded-full shadow-[0_0_10px_rgba(197,155,39,0.5)] transform-gpu"
             initial={{ width: '0%' }}
@@ -102,7 +102,7 @@ export default function RoadmapTimeline() {
         </div>
 
         {/* 5-Step Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 relative z-10">
           {STEPS.map((step, index) => {
             const isActive = activeStep === index;
             const isCompleted = activeStep > index;
@@ -112,26 +112,26 @@ export default function RoadmapTimeline() {
               <div
                 key={step.num}
                 onClick={() => handleStepClick(index)}
-                className="relative flex flex-col items-start cursor-pointer group p-5 sm:p-6 rounded-3xl transition-colors duration-300 select-none"
+                className="relative flex flex-col items-start cursor-pointer group p-4 sm:p-5 lg:p-6 rounded-2xl sm:rounded-3xl transition-colors duration-300 select-none"
               >
                 {/* Smooth Moving Background Highlight */}
                 {isActive && (
                   <motion.div
                     layoutId="activeStepCardHighlight"
-                    className="absolute inset-0 bg-[#FAF3E6] border border-[#C59B27]/50 rounded-3xl shadow-lg shadow-[#C59B27]/10 z-0 transform-gpu"
+                    className="absolute inset-0 bg-[#FAF3E6] border border-[#C59B27]/50 rounded-2xl sm:rounded-3xl shadow-lg shadow-[#C59B27]/10 z-0 transform-gpu"
                     transition={{ type: "spring", stiffness: 260, damping: 26 }}
                   />
                 )}
 
                 <div className="relative z-10 w-full flex flex-col items-start">
                   {/* Icon Circle */}
-                  <div className="relative mb-5">
+                  <div className="relative mb-4 sm:mb-5">
                     <motion.div
                       animate={{ 
                         scale: isActive ? 1.1 : 1
                       }}
                       transition={{ duration: 0.35, ease: [0.25, 1, 0.5, 1] }}
-                      className={`w-14 h-14 rounded-full flex items-center justify-center relative z-10 transition-all duration-300 transform-gpu ${
+                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center relative z-10 transition-all duration-300 transform-gpu ${
                         isActive
                           ? 'bg-[#0C192E] border-2 border-[#C59B27] shadow-lg shadow-[#0C192E]/20'
                           : isCompleted
@@ -140,7 +140,7 @@ export default function RoadmapTimeline() {
                       }`}
                     >
                       <Icon
-                        className={`w-5 h-5 transition-colors duration-300 ${
+                        className={`w-4 h-4 sm:w-5 sm:h-5 transition-colors duration-300 ${
                           isActive
                             ? 'text-[#C59B27]'
                             : isCompleted
@@ -152,14 +152,14 @@ export default function RoadmapTimeline() {
                   </div>
 
                   {/* Step Number */}
-                  <span className={`text-xs font-serif block mb-1.5 tracking-[0.2em] transition-colors duration-300 ${
+                  <span className={`text-[11px] sm:text-xs font-serif block mb-1 sm:mb-1.5 tracking-[0.2em] transition-colors duration-300 ${
                     isActive ? 'text-[#C59B27] font-bold' : 'text-[#C59B27]/80'
                   }`}>
                     {step.num}
                   </span>
 
                   {/* Title */}
-                  <h3 className={`text-lg sm:text-xl font-serif mb-2.5 leading-snug transition-colors duration-300 ${
+                  <h3 className={`text-base sm:text-lg lg:text-xl font-serif mb-2 leading-snug transition-colors duration-300 ${
                     isActive ? 'text-[#0C192E] font-bold' : 'text-[#0C192E]'
                   }`}>
                     {step.title}
@@ -179,7 +179,7 @@ export default function RoadmapTimeline() {
       </div>
 
       {/* Smooth Animated Active Detail Banner at Bottom */}
-      <div className="mt-8 relative overflow-hidden min-h-[100px]">
+      <div className="mt-6 sm:mt-8 relative overflow-hidden min-h-[100px]">
         <AnimatePresence mode="popLayout">
           <motion.div
             key={activeStep}
@@ -187,18 +187,18 @@ export default function RoadmapTimeline() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.35, ease: [0.25, 1, 0.5, 1] }}
-            className="p-6 rounded-2xl bg-[#0C192E] text-white border border-[#1E2D45] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl transform-gpu"
+            className="p-4 sm:p-6 rounded-2xl bg-[#0C192E] text-white border border-[#1E2D45] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 shadow-xl transform-gpu"
           >
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-xl bg-[#162744] border border-[#C59B27]/40 flex items-center justify-center text-[#C59B27] shrink-0 font-serif font-bold text-sm">
+            <div className="flex items-start sm:items-center gap-3 sm:gap-4">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#162744] border border-[#C59B27]/40 flex items-center justify-center text-[#C59B27] shrink-0 font-serif font-bold text-xs sm:text-sm">
                 {STEPS[activeStep].num}
               </div>
               <div>
-                <h4 className="text-base sm:text-lg font-serif font-bold text-white flex items-center gap-2">
+                <h4 className="text-sm sm:text-base md:text-lg font-serif font-bold text-white flex flex-wrap items-center gap-2">
                   <span>{STEPS[activeStep].title}</span>
-                  <span className="text-xs text-[#C59B27] font-sans font-normal uppercase tracking-wider">Active Stage</span>
+                  <span className="text-[10px] sm:text-xs text-[#C59B27] font-sans font-normal uppercase tracking-wider bg-[#C59B27]/10 px-2 py-0.5 rounded border border-[#C59B27]/20">Active Stage</span>
                 </h4>
-                <p className="text-xs sm:text-sm text-slate-300 mt-0.5">
+                <p className="text-xs sm:text-sm text-slate-300 mt-1 sm:mt-0.5 leading-relaxed">
                   {STEPS[activeStep].desc}
                 </p>
               </div>
@@ -206,7 +206,7 @@ export default function RoadmapTimeline() {
 
             <Link
               to={STEPS[activeStep].link}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#C59B27] hover:bg-[#d8a82c] text-[#0C192E] text-xs font-bold uppercase tracking-wider rounded-full shrink-0 transition-all shadow-md transform hover:-translate-y-0.5"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#C59B27] hover:bg-[#d8a82c] text-[#0C192E] text-xs font-bold uppercase tracking-wider rounded-full shrink-0 transition-all shadow-md transform hover:-translate-y-0.5"
             >
               <span>EXPLORE {STEPS[activeStep].title}</span>
               <ArrowRight className="w-3.5 h-3.5" />
