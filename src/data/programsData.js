@@ -4,9 +4,17 @@ import web18Aug from '../assets/Webinar/18 Aug 2026.jpeg';
 import web18AugAlt from '../assets/Webinar/18 Aug 2026-1.jpeg';
 import web21Aug from '../assets/Webinar/21 Aug 2026.jpeg';
 import web25Aug from '../assets/Webinar/25 Aug 2026.jpeg';
+import web15Sep from '../assets/Webinar/15 Sep 2026.jpeg';
+import web18Sep from '../assets/Webinar/18 Sep 2026.jpeg';
+import web19Sep from '../assets/Webinar/19 Sep 2026.jpeg';
+import web21Sep from '../assets/Webinar/21 Sep 2026.jpeg';
+import web24Sep from '../assets/Webinar/24 Sep 2026.jpeg';
 
 // Workshop
-import workshop_1 from '../assets/Workshop/Workshop 27th August_page-0001.jpg'
+import workshop_1 from '../assets/Workshop/Workshop 27th August_page-0001.jpg';
+import wrkAIMarketing from '../assets/Workshop/AI Marketing Studio 25-27 Aug 2026.jpg';
+import wrkCAFoundation from '../assets/Workshop/CA Foundation 25-27 Aug 2026.jpg';
+import wrkPowerBI from '../assets/Workshop/Power BI Dashboard 28-30 Aug 2026.jpg';
 
 export const programsData = {
   webinars: {
@@ -16,10 +24,10 @@ export const programsData = {
     tagline: 'Live, expert-led interactive sessions',
     heroTitle: 'Master High-Demand Industry Skills Live',
     heroDesc: 'Power sessions with top industry leaders, AI strategists, and recruiters. Get practical insights that expand what your degree covers.',
-    poster: web21Aug,
-    posterTitle: 'HOW TO GET INTERNSHIPS USING AI',
-    posterSub: 'Live Interactive Session',
-    regLink: 'https://forms.gle/W6AZdbdbjQVxKfmE8',
+    poster: web24Sep,
+    posterTitle: 'THE DESIGN THINKING JOURNEY',
+    posterSub: 'Live Interactive Session • 24th Sept 2026',
+    regLink: 'https://forms.gle/CmNuQipsUAxECi57',
     waLink: 'https://chat.whatsapp.com/',
     repLink: 'https://wa.me/917022603588',
     stats: [
@@ -29,6 +37,128 @@ export const programsData = {
       { label: 'Offer Price', value: '₹49 (Reg. ₹99)' }
     ],
     upcomingList: [
+      {
+        id: 'web-up-sep-15',
+        title: 'Research Excellence in the Digital Era: AI Tools, Data Analytics & Emerging Technologies',
+        tagline: 'National Level Faculty Development Programme (FDP)',
+        date: '15th – 19th Sep 2026',
+        time: '2:00 PM - 4:00 PM IST',
+        fee: 'Free / Special Entry',
+        originalFee: 'Registration Open',
+        speaker: 'Dr. P. Paramasivam, Ms. D. Jayalakshmi, Mr. Vijay Reddy, Mr. Manoj Kanth, Ms. D. Praveena',
+        speakerRole: 'Avinash College of Commerce & White Stone Publication',
+        image: web15Sep,
+        badge: 'Faculty Development',
+        desc: 'Organized in collaboration with Avinash College of Commerce (Secunderabad) & White Stone Publication. Explore AI tools, data analytics, SPSS, and emerging technologies for academic research excellence.',
+        takeaways: [
+          'Gain practical knowledge of cutting-edge digital & AI research tools',
+          'Learn AI, data analytics & SPSS for academic excellence',
+          'Discover emerging trends shaping the future of education & research',
+          'Build research skills for real-world impact and innovation'
+        ],
+        perks: 'National Level Certification, Resource Materials, Academic Network',
+        regLink: 'https://forms.gle/CmNuQipsUAxECi57',
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: false
+      },
+      {
+        id: 'web-up-sep-18',
+        title: 'What Makes People Click? Digital Marketing Strategies That Work',
+        tagline: 'Learn Smart. Market Smarter. Grow Faster.',
+        date: 'Friday, 18 Sep 2026',
+        time: '7:00 PM - 9:00 PM IST',
+        fee: '₹49',
+        originalFee: '₹99',
+        speaker: 'Digital Marketing & AI Panel',
+        speakerRole: 'AI Marketing & Performance Strategists',
+        image: web18Sep,
+        badge: 'Upcoming Live',
+        desc: 'Discover the fundamentals of Digital Marketing integrated with AI tools. Learn real-world applications, AI content generation, and strategies that drive audience engagement.',
+        takeaways: [
+          'Basics of Digital Marketing & AI',
+          'Using AI in Digital Marketing & Content Creation',
+          'Real-World Scope of Digital Marketing & AI',
+          'Interactive Discussion & Q&A Session'
+        ],
+        perks: 'Register under 24 hours & get a FREE E-Certificate!, Practical Skills, Growth Tools',
+        regLink: 'https://forms.gle/CmNuQipsUAxECi57',
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: false
+      },
+      {
+        id: 'web-up-sep-19',
+        title: 'Before You Start CA, Know This!',
+        tagline: 'A practical guide for CA aspirants',
+        date: 'Saturday, 19 Sep 2026',
+        time: '7:00 PM - 9:00 PM IST',
+        fee: '₹49',
+        originalFee: '₹99',
+        speaker: 'Industry CA Professionals & Mentors',
+        speakerRole: 'Chartered Accountants & Financial Advisors',
+        image: web19Sep,
+        badge: 'CA Aspirants Special',
+        desc: 'An essential practical roadmap for Chartered Accountancy aspirants. Learn how to plan smart, study better, avoid common pitfalls, and build the right mindset for success.',
+        takeaways: [
+          'Understand the CA Journey & Clear Roadmap',
+          'Plan Smart & Study Better (Tips to Stay Ahead)',
+          'Avoid Common Mistakes & Build the Right Mindset',
+          'Expert Guidance & Real Stories from CA Achievers'
+        ],
+        perks: 'E-Certificate!, Expert Mentorship, Practical Study Tips',
+        regLink: 'https://forms.gle/CmNuQipsUAxECi57',
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: false
+      },
+      {
+        id: 'web-up-sep-21',
+        title: 'Can AI Replace Humans? The Real Answer',
+        tagline: 'Innovate. Automate. Elevate.',
+        date: 'Monday, 21 Sep 2026',
+        time: '7:00 PM - 9:00 PM IST',
+        fee: '₹49',
+        originalFee: '₹99',
+        speaker: 'AI Researchers & Industry Leaders',
+        speakerRole: 'AI Strategists & Technology Mentors',
+        image: web21Sep,
+        badge: 'Trending AI Webinar',
+        desc: 'Delve into the real capabilities and limitations of Artificial Intelligence compared to human creativity, emotional intelligence, and critical judgment in modern industries.',
+        takeaways: [
+          'Understanding the strengths and limitations of AI',
+          'AI capabilities vs. human intelligence, creativity & judgment',
+          'Applications, Benefits & Impact on Modern Industry',
+          'Interactive Q&A Session with Industry Experts'
+        ],
+        perks: 'Learn from Industry Experts, Gain Practical Knowledge, Enhance Career Opportunities',
+        regLink: 'https://forms.gle/nuE1VfapidivecvR6',
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: false
+      },
+      {
+        id: 'web-up-sep-24',
+        title: 'The Design Thinking Journey: ReThink Everything.',
+        tagline: 'Learn Smart. Market Smarter. Grow Faster.',
+        date: 'Thursday, 24 Sep 2026',
+        time: '7:00 PM - 9:00 PM IST',
+        fee: '₹49',
+        originalFee: '₹99',
+        speaker: 'Product Design & UX Leaders',
+        speakerRole: 'Design Strategists & Innovation Mentors',
+        image: web24Sep,
+        badge: 'Featured Live',
+        desc: 'Master problem-solving and user-centric innovation. Learn empathy mapping, creative ideation, prototyping, and rapid testing to solve real-world challenges.',
+        takeaways: [
+          'Understand the User (Empathy & real user needs)',
+          'Brainstorming & Creative Ideation Techniques',
+          'Prototype & Experiment (Simple, testable solutions)',
+          'Interactive Discussion & Q&A Session'
+        ],
+        perks: 'Register under 24 hours & get a FREE E-Certificate!, Practical Skills & Innovation Tools',
+        regLink: 'https://forms.gle/CmNuQipsUAxECi57',
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: false
+      }
+    ],
+    completedList: [
       {
         id: 'web-up-1',
         title: 'Business Beyond Classroom',
@@ -40,7 +170,7 @@ export const programsData = {
         speaker: 'Corporate & Business Leaders',
         speakerRole: 'HR Leader & Corporate Mentor',
         image: web18Aug,
-        badge: 'Upcoming Live',
+        badge: 'Completed',
         desc: 'Learn essential sales strategies for different customers, business overview, AI tools for sales, startup roadmaps, and communication improvement.',
         takeaways: [
           'Sales Strategy for Different Types of Customers',
@@ -50,7 +180,7 @@ export const programsData = {
         perks: 'E-Certificate, Recorded Sessions, Exclusive Resources',
         regLink: 'https://forms.gle/3VrwrPxBddDgUShB7',
         waLink: 'https://chat.whatsapp.com/',
-        isCompleted: false
+        isCompleted: true
       },
       {
         id: 'web-up-2',
@@ -63,7 +193,7 @@ export const programsData = {
         speaker: 'Growth & Digital Marketing Panel',
         speakerRole: 'AI Marketing & Performance Strategists',
         image: web18AugAlt,
-        badge: 'Upcoming Live',
+        badge: 'Completed',
         desc: 'Master AI tools for smarter marketing, campaign automation, data-driven strategy, AI content creation, and performance marketing.',
         takeaways: [
           'AI Tools for Smarter Marketing & Campaign Automation',
@@ -73,7 +203,7 @@ export const programsData = {
         perks: 'E-Certificate, Recorded Sessions, Templates & Cheatsheets',
         regLink: 'https://forms.gle/GPfCv7T6yRoVEmNY9',
         waLink: 'https://chat.whatsapp.com/',
-        isCompleted: false
+        isCompleted: true
       },
       {
         id: 'web-up-3',
@@ -86,7 +216,7 @@ export const programsData = {
         speaker: 'Talent Acquisition & AI Mentors',
         speakerRole: 'Career Strategists & Industry Practitioners',
         image: web21Aug,
-        badge: 'Popular Choice',
+        badge: 'Completed',
         desc: 'Unlock internship opportunities by leveraging AI tools for mindset shift, productivity, personal branding, and smart decision making.',
         takeaways: [
           'AI for Professionals: Mindset & Internship Opportunities',
@@ -96,7 +226,7 @@ export const programsData = {
         perks: 'Free Certificate (24hr reg), Recorded Sessions, Resources',
         regLink: 'https://forms.gle/W6AZdbdbjQVxKfmE8',
         waLink: 'https://chat.whatsapp.com/',
-        isCompleted: false
+        isCompleted: true
       },
       {
         id: 'web-up-4',
@@ -109,7 +239,7 @@ export const programsData = {
         speaker: 'Senior Placement & HR Leaders',
         speakerRole: 'Corporate Recruiters & Placement Mentors',
         image: web25Aug,
-        badge: 'Placement Special',
+        badge: 'Completed',
         desc: 'Discover in-demand future skills, high-growth career paths, interview stand-out strategies, and LinkedIn profile optimization.',
         takeaways: [
           'In-Demand Future Skills & High-Growth Career Paths',
@@ -119,10 +249,8 @@ export const programsData = {
         perks: 'E-Certificate, Recorded Sessions, Exclusive Resources',
         regLink: 'https://forms.gle/y5LRRMbUe5eUE8ZK7',
         waLink: 'https://chat.whatsapp.com/',
-        isCompleted: false
-      }
-    ],
-    completedList: [
+        isCompleted: true
+      },
       {
         id: 'web-comp-1',
         title: 'Elevate Open House',
@@ -178,8 +306,8 @@ export const programsData = {
     tagline: 'Practical learning & real project execution',
     heroTitle: 'Build Real Deliverables with Mentor Feedback',
     heroDesc: 'Interactive 2-3 day bootcamps where you practice live, solve real industry challenges, build portfolio projects, and earn verified skill credentials.',
-    poster: workshop_1,
-    posterTitle: 'AI MARKETING STUDIO WORKSHOP',
+    poster: wrkPowerBI,
+    posterTitle: 'YOUR POWER BI DASHBOARD JOURNEY',
     posterSub: '3 Days Hands-on Workshop',
     regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
     waLink: 'https://chat.whatsapp.com/',
@@ -188,38 +316,17 @@ export const programsData = {
       { label: 'Duration', value: '3 Days (2 Hrs/Day)' },
       { label: 'Format', value: 'Live Hands-on' },
       { label: 'Certificate', value: 'Industry Credential' },
-      { label: 'Early Bird', value: '₹299 (Reg. ₹599)' }
+      { label: 'Offer Price', value: '₹399 (Reg. ₹699)' }
     ],
     upcomingList: [
-      {
-        id: 'wrk-up-1',
-        title: 'AI Marketing Studio Workshop',
-        tagline: 'Learn by Doing — 3 Days. Practical Learning. Real Skills.',
-        date: '27th – 29th Aug 2026',
-        time: '7:00 PM - 9:00 PM IST (3 Days)',
-        fee: '₹299',
-        originalFee: '₹599',
-        speaker: 'AI & Growth Marketing Panel',
-        speakerRole: 'Digital Marketing & AI Specialists',
-        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
-        badge: 'Featured Workshop',
-        desc: 'A hands-on 3-day bootcamp for students to learn Digital Marketing using AI, build websites, automate email campaigns, and work on real-world projects.',
-        takeaways: [
-          'Day 1: AI Content Creation, image/video generation & email marketing',
-          'Day 2: AI Website Building & search engine optimization (SEO)',
-          'Day 3: Real Life Projects & Experience — Get experienced as a fresher!'
-        ],
-        perks: 'E-Certificate, Curated Study Materials & Optional Recorded Classes',
-        regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
-        waLink: 'https://chat.whatsapp.com/',
-        isCompleted: false
-      },
       {
         id: 'wrk-up-2',
         title: 'Resume Sculpting & ATS Optimization Studio',
         tagline: 'Build a Resume That Lands Interview Calls',
         date: '05th – 06th Sep 2026',
         time: 'Weekend Batch (4 Hours Total)',
+        fee: '₹299',
+        originalFee: '₹599',
         speaker: 'HR Talent Acquisition Leaders',
         speakerRole: 'Corporate Recruiters & Resume Strategists',
         image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800',
@@ -231,7 +338,7 @@ export const programsData = {
           'Personal portfolio showcase & LinkedIn alignment'
         ],
         perks: 'Editable Resume Templates & 1-on-1 Review',
-        regLink: 'https://forms.gle/',
+        regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
         waLink: 'https://chat.whatsapp.com/',
         isCompleted: false
       },
@@ -241,6 +348,8 @@ export const programsData = {
         tagline: 'Build & Deploy Live Code in 2 Days',
         date: '12th – 13th Sep 2026',
         time: 'Evening Intensive (6:00 PM - 8:30 PM)',
+        fee: '₹399',
+        originalFee: '₹699',
         speaker: 'Lead Tech Mentors',
         speakerRole: 'Senior Full-Stack Architect',
         image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=800',
@@ -252,12 +361,81 @@ export const programsData = {
           'Deploying live to Vercel/Netlify with custom domain'
         ],
         perks: 'GitHub Repo Template & Code Certification',
-        regLink: 'https://forms.gle/',
+        regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
         waLink: 'https://chat.whatsapp.com/',
         isCompleted: false
       }
     ],
     completedList: [
+      {
+        id: 'wrk-comp-aug-28-pbi',
+        title: 'Your Power BI Dashboard Journey',
+        tagline: 'Learn By Doing — Transform Raw Data into Dashboards',
+        date: '28th – 30th August 2026',
+        time: '7:00 PM - 9:00 PM IST (3 Days)',
+        fee: '₹399',
+        originalFee: '₹699',
+        speaker: 'Data Analytics & Power BI Mentors',
+        speakerRole: 'Senior Data Analytics Consultants',
+        image: wrkPowerBI,
+        badge: 'Completed',
+        desc: 'A practical Power BI workshop that helps students transform raw data into interactive dashboards, uncover meaningful insights, and make confident, data-driven decisions.',
+        takeaways: [
+          'Connect Your Data & Build Interactive Dashboards',
+          'Visualize Insights, Analyze Trends & Share Impact',
+          'Uncover meaningful insights for confident data-driven decisions'
+        ],
+        perks: 'Certificate Provided, Hands-on Dashboard Projects',
+        regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: true
+      },
+      {
+        id: 'wrk-comp-aug-25-ai',
+        title: 'AI Marketing Studio: Learn By Doing',
+        tagline: 'Learn By Doing',
+        date: '25th – 27th August 2026',
+        time: '7:00 PM - 9:00 PM IST (3 Days)',
+        fee: '₹399',
+        originalFee: '₹699',
+        speaker: 'AI & Growth Marketing Specialists',
+        speakerRole: 'Digital Campaign & SEO Experts',
+        image: wrkAIMarketing,
+        badge: 'Completed',
+        desc: 'A practical AI Marketing Studio workshop that helps students master digital campaigns, SEO, email marketing, video content, and analytics with real projects.',
+        takeaways: [
+          'Work on real projects with practical skills for the real world',
+          'Get Experienced as a Fresher & Build Digital Campaigns',
+          'SEO, Email Marketing, Social Media & Video Content'
+        ],
+        perks: 'Certificate Provided, Work on Real Projects',
+        regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: true
+      },
+      {
+        id: 'wrk-comp-aug-25-ca',
+        title: 'CA Foundation: Are You Exam Ready?',
+        tagline: 'Build Your Professional Edge',
+        date: '25th – 27th August 2026',
+        time: '7:00 PM - 9:00 PM IST (3 Days)',
+        fee: '₹399',
+        originalFee: '₹699',
+        speaker: 'CA Mentors & Accounting Leaders',
+        speakerRole: 'Chartered Accountants & Financial Analysts',
+        image: wrkCAFoundation,
+        badge: 'Completed',
+        desc: 'A practical CA Foundation workshop for students to strengthen accounting concepts, develop analytical skills, understand real-world business scenarios, and prepare confidently.',
+        takeaways: [
+          'Strengthen accounting concepts & analytical thinking',
+          'Understand real-world business scenarios & financial statements',
+          'Prepare confidently for exams and professional journey'
+        ],
+        perks: 'Certificate Provided, Professional Readiness Edge',
+        regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: true
+      },
       {
         id: 'wrk-comp-1',
         title: 'UI/UX & Figma Design Systems Studio',
