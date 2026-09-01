@@ -4,11 +4,14 @@ import web18Aug from '../assets/Webinar/18 Aug 2026.jpeg';
 import web18AugAlt from '../assets/Webinar/18 Aug 2026-1.jpeg';
 import web21Aug from '../assets/Webinar/21 Aug 2026.jpeg';
 import web25Aug from '../assets/Webinar/25 Aug 2026.jpeg';
-import web15Sep from '../assets/Webinar/15 Sep 2026.jpeg';
 import web18Sep from '../assets/Webinar/18 Sep 2026.jpeg';
 import web19Sep from '../assets/Webinar/19 Sep 2026.jpeg';
+import web19SepAuto from '../assets/Webinar/19 Sep 2026 Automobile.jpg';
 import web21Sep from '../assets/Webinar/21 Sep 2026.jpeg';
 import web24Sep from '../assets/Webinar/24 Sep 2026.jpeg';
+import web26Sep from '../assets/Webinar/26 Sep 2026.jpeg';
+import web26SepCyber from '../assets/Webinar/26 Sep 2026 Cybersecurity.jpg';
+import web27SepResearch from '../assets/Webinar/27 Sep 2026 Research.jpg';
 
 // Workshop
 import workshop_1 from '../assets/Workshop/Workshop 27th August_page-0001.jpg';
@@ -24,9 +27,9 @@ export const programsData = {
     tagline: 'Live, expert-led interactive sessions',
     heroTitle: 'Master High-Demand Industry Skills Live',
     heroDesc: 'Power sessions with top industry leaders, AI strategists, and recruiters. Get practical insights that expand what your degree covers.',
-    poster: web24Sep,
-    posterTitle: 'THE DESIGN THINKING JOURNEY',
-    posterSub: 'Live Interactive Session • 24th Sept 2026',
+    poster: web27SepResearch,
+    posterTitle: 'RESEARCH METHODOLOGY FOR FACULTY & STUDENTS',
+    posterSub: 'Live Interactive Session • 27th Sept 2026',
     regLink: 'https://forms.gle/CmNuQipsUAxECi57',
     waLink: 'https://chat.whatsapp.com/',
     repLink: 'https://wa.me/917022603588',
@@ -37,30 +40,6 @@ export const programsData = {
       { label: 'Offer Price', value: '₹49 (Reg. ₹99)' }
     ],
     upcomingList: [
-      {
-        id: 'web-up-sep-15',
-        title: 'Research Excellence in the Digital Era: AI Tools, Data Analytics & Emerging Technologies',
-        tagline: 'National Level Faculty Development Programme (FDP)',
-        date: '15th – 19th Sep 2026',
-        time: '2:00 PM - 4:00 PM IST',
-        fee: 'Free / Special Entry',
-        originalFee: 'Registration Open',
-        speaker: 'Dr. P. Paramasivam, Ms. D. Jayalakshmi, Mr. Vijay Reddy, Mr. Manoj Kanth, Ms. D. Praveena',
-        speakerRole: 'Avinash College of Commerce & White Stone Publication',
-        image: web15Sep,
-        badge: 'Faculty Development',
-        desc: 'Organized in collaboration with Avinash College of Commerce (Secunderabad) & White Stone Publication. Explore AI tools, data analytics, SPSS, and emerging technologies for academic research excellence.',
-        takeaways: [
-          'Gain practical knowledge of cutting-edge digital & AI research tools',
-          'Learn AI, data analytics & SPSS for academic excellence',
-          'Discover emerging trends shaping the future of education & research',
-          'Build research skills for real-world impact and innovation'
-        ],
-        perks: 'National Level Certification, Resource Materials, Academic Network',
-        regLink: 'https://forms.gle/CmNuQipsUAxECi57',
-        waLink: 'https://chat.whatsapp.com/',
-        isCompleted: false
-      },
       {
         id: 'web-up-sep-18',
         title: 'What Makes People Click? Digital Marketing Strategies That Work',
@@ -82,6 +61,31 @@ export const programsData = {
         ],
         perks: 'Register under 24 hours & get a FREE E-Certificate!, Practical Skills, Growth Tools',
         regLink: 'https://forms.gle/CmNuQipsUAxECi57',
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: false
+      },
+      {
+        id: 'web-up-sep-19-auto',
+        title: 'SKETCH TO STREET - The Future of Automobile Design',
+        tagline: 'Innovate. Automate. Elevate.',
+        date: 'Saturday, 19th Sept 2026',
+        time: '07:00 PM – 09:00 PM (IST)',
+        fee: '₹49',
+        originalFee: '₹99',
+        speaker: 'Automobile & Industrial Design Panel',
+        speakerRole: 'Automotive Designers & CAD Tool Specialists',
+        image: web19SepAuto,
+        badge: 'Automobile Design Special',
+        desc: 'Explore concept sketching, automotive styling, 3D modeling tools, and modern industry applications shaping the future of vehicle design.',
+        takeaways: [
+          'Concept Sketching & Automotive Styling',
+          '3D Modelling & Digital Design Tools',
+          'Applications in Modern Industry',
+          'Benefits & Impact on Industries',
+          'Q&A Session'
+        ],
+        perks: 'Learn from Industry Experts, Gain Practical Knowledge, Enhance Career Opportunities',
+        regLink: 'https://forms.gle/nuE1VfapidivecvR6',
         waLink: 'https://chat.whatsapp.com/',
         isCompleted: false
       },
@@ -137,7 +141,7 @@ export const programsData = {
         id: 'web-up-sep-24',
         title: 'The Design Thinking Journey: ReThink Everything.',
         tagline: 'Learn Smart. Market Smarter. Grow Faster.',
-        date: 'Thursday, 24 Sep 2026',
+        date: 'Thursday, 24th Sep 2026',
         time: '7:00 PM - 9:00 PM IST',
         fee: '₹49',
         originalFee: '₹99',
@@ -153,6 +157,55 @@ export const programsData = {
           'Interactive Discussion & Q&A Session'
         ],
         perks: 'Register under 24 hours & get a FREE E-Certificate!, Practical Skills & Innovation Tools',
+        regLink: 'https://forms.gle/CmNuQipsUAxECi57',
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: false
+      },
+      {
+        id: 'web-up-sep-26-cyber',
+        title: 'Inside the World of Cybersecurity',
+        tagline: 'Innovate. Automate. Elevate.',
+        date: 'Saturday, 26th Sept 2026',
+        time: '07:00 PM – 09:00 PM (IST)',
+        fee: '₹49',
+        originalFee: '₹99',
+        speaker: 'Cybersecurity & Ethical Hacking Panel',
+        speakerRole: 'Security Analysts & Cyber Threat Mentors',
+        image: web26SepCyber,
+        badge: 'Cybersecurity Special',
+        desc: 'Understand digital threats, vulnerabilities, attacker tricks, modern attack vectors, and how cybersecurity safeguards modern industries.',
+        takeaways: [
+          'Understand threats, vulnerabilities & digital risks',
+          'Recognize the tricks attackers use to target people',
+          'Understand how modern attacks work',
+          'Benefits & Impact on Industries',
+          'Q&A Session'
+        ],
+        perks: 'Learn from Industry Experts, Gain Practical Knowledge, Enhance Career Opportunities',
+        regLink: 'https://forms.gle/nuE1VfapidivecvR6',
+        waLink: 'https://chat.whatsapp.com/',
+        isCompleted: false
+      },
+      {
+        id: 'web-up-sep-27-research',
+        title: 'Research Methodology For Faculty and Students',
+        tagline: 'Explore principles, processes, and practical tools of research',
+        date: 'Sunday, 27th Sept 2026',
+        time: '07:00 PM – 09:00 PM (IST)',
+        fee: '₹49',
+        originalFee: '₹99',
+        speaker: 'Academic Research Mentors & Scholars',
+        speakerRole: 'Faculty & Research Methodology Experts',
+        image: web27SepResearch,
+        badge: 'Faculty & Students Special',
+        desc: 'Explore the principles, processes, and practical tools of research to build rigor, clarity, and impact in your academic and professional work.',
+        takeaways: [
+          'Understand research foundations and design',
+          'Learn data collection and analysis techniques',
+          'Apply methods to real academic contexts',
+          'Strengthen academic and professional impact'
+        ],
+        perks: 'Register under 24 hours & get a FREE E-Certificate!, Practical Research Tools, Academic Impact',
         regLink: 'https://forms.gle/CmNuQipsUAxECi57',
         waLink: 'https://chat.whatsapp.com/',
         isCompleted: false
@@ -320,55 +373,7 @@ export const programsData = {
     ],
     upcomingList: [
       {
-        id: 'wrk-up-2',
-        title: 'Resume Sculpting & ATS Optimization Studio',
-        tagline: 'Build a Resume That Lands Interview Calls',
-        date: '05th – 06th Sep 2026',
-        time: 'Weekend Batch (4 Hours Total)',
-        fee: '₹299',
-        originalFee: '₹599',
-        speaker: 'HR Talent Acquisition Leaders',
-        speakerRole: 'Corporate Recruiters & Resume Strategists',
-        image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800',
-        badge: 'Placement Special',
-        desc: 'Bring your draft resume and rebuild it live with recruiters. Ensure your resume passes Applicant Tracking Systems (ATS) and stands out.',
-        takeaways: [
-          'ATS resume formatting, keywords & parser compatibility',
-          'Action-verb bullet formulas for maximum impact',
-          'Personal portfolio showcase & LinkedIn alignment'
-        ],
-        perks: 'Editable Resume Templates & 1-on-1 Review',
-        regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
-        waLink: 'https://chat.whatsapp.com/',
-        isCompleted: false
-      },
-      {
-        id: 'wrk-up-3',
-        title: 'Full-Stack Web Development Sprint',
-        tagline: 'Build & Deploy Live Code in 2 Days',
-        date: '12th – 13th Sep 2026',
-        time: 'Evening Intensive (6:00 PM - 8:30 PM)',
-        fee: '₹399',
-        originalFee: '₹699',
-        speaker: 'Lead Tech Mentors',
-        speakerRole: 'Senior Full-Stack Architect',
-        image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=800',
-        badge: 'Hands-on Code',
-        desc: 'Build and deploy a full-stack web application live. Master React components, Node.js API integration, and cloud hosting.',
-        takeaways: [
-          'RESTful API development with Node.js & Express',
-          'React component state & modern UI styling',
-          'Deploying live to Vercel/Netlify with custom domain'
-        ],
-        perks: 'GitHub Repo Template & Code Certification',
-        regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
-        waLink: 'https://chat.whatsapp.com/',
-        isCompleted: false
-      }
-    ],
-    completedList: [
-      {
-        id: 'wrk-comp-aug-28-pbi',
+        id: 'wrk-up-aug-28-pbi',
         title: 'Your Power BI Dashboard Journey',
         tagline: 'Learn By Doing — Transform Raw Data into Dashboards',
         date: '28th – 30th August 2026',
@@ -378,7 +383,7 @@ export const programsData = {
         speaker: 'Data Analytics & Power BI Mentors',
         speakerRole: 'Senior Data Analytics Consultants',
         image: wrkPowerBI,
-        badge: 'Completed',
+        badge: 'Upcoming Live',
         desc: 'A practical Power BI workshop that helps students transform raw data into interactive dashboards, uncover meaningful insights, and make confident, data-driven decisions.',
         takeaways: [
           'Connect Your Data & Build Interactive Dashboards',
@@ -388,10 +393,10 @@ export const programsData = {
         perks: 'Certificate Provided, Hands-on Dashboard Projects',
         regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
         waLink: 'https://chat.whatsapp.com/',
-        isCompleted: true
+        isCompleted: false
       },
       {
-        id: 'wrk-comp-aug-25-ai',
+        id: 'wrk-up-aug-25-ai',
         title: 'AI Marketing Studio: Learn By Doing',
         tagline: 'Learn By Doing',
         date: '25th – 27th August 2026',
@@ -401,7 +406,7 @@ export const programsData = {
         speaker: 'AI & Growth Marketing Specialists',
         speakerRole: 'Digital Campaign & SEO Experts',
         image: wrkAIMarketing,
-        badge: 'Completed',
+        badge: 'Upcoming Live',
         desc: 'A practical AI Marketing Studio workshop that helps students master digital campaigns, SEO, email marketing, video content, and analytics with real projects.',
         takeaways: [
           'Work on real projects with practical skills for the real world',
@@ -411,10 +416,10 @@ export const programsData = {
         perks: 'Certificate Provided, Work on Real Projects',
         regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
         waLink: 'https://chat.whatsapp.com/',
-        isCompleted: true
+        isCompleted: false
       },
       {
-        id: 'wrk-comp-aug-25-ca',
+        id: 'wrk-up-aug-25-ca',
         title: 'CA Foundation: Are You Exam Ready?',
         tagline: 'Build Your Professional Edge',
         date: '25th – 27th August 2026',
@@ -424,7 +429,7 @@ export const programsData = {
         speaker: 'CA Mentors & Accounting Leaders',
         speakerRole: 'Chartered Accountants & Financial Analysts',
         image: wrkCAFoundation,
-        badge: 'Completed',
+        badge: 'Upcoming Live',
         desc: 'A practical CA Foundation workshop for students to strengthen accounting concepts, develop analytical skills, understand real-world business scenarios, and prepare confidently.',
         takeaways: [
           'Strengthen accounting concepts & analytical thinking',
@@ -434,8 +439,10 @@ export const programsData = {
         perks: 'Certificate Provided, Professional Readiness Edge',
         regLink: 'https://forms.gle/hdGy5nzz3Bb4sCsUA',
         waLink: 'https://chat.whatsapp.com/',
-        isCompleted: true
-      },
+        isCompleted: false
+      }
+    ],
+    completedList: [
       {
         id: 'wrk-comp-1',
         title: 'UI/UX & Figma Design Systems Studio',
