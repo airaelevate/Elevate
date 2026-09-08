@@ -30,7 +30,7 @@ export const programsData = {
     poster: web27SepResearch,
     posterTitle: 'RESEARCH METHODOLOGY FOR FACULTY & STUDENTS',
     posterSub: 'Live Interactive Session • 27th Sept 2026',
-    regLink: 'https://forms.gle/CmNuQipsUAxECi57',
+    regLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfHznjrz4s-VzpZ1t43w2DsvFhSTt4Rxw4Dhz8WpjgIFz08jQ/viewform?usp=header',
     waLink: 'https://chat.whatsapp.com/',
     repLink: 'https://wa.me/917022603588',
     stats: [
@@ -60,7 +60,7 @@ export const programsData = {
           'Interactive Discussion & Q&A Session'
         ],
         perks: 'Register under 24 hours & get a FREE E-Certificate!, Practical Skills, Growth Tools',
-        regLink: 'https://forms.gle/CmNuQipsUAxECi57',
+        regLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfMf7o7V41nHJC0swz1FPLRp6vT6R9_RphwVKq3kYoW8DgGKg/viewform?usp=header',
         waLink: 'https://chat.whatsapp.com/',
         isCompleted: false
       },
@@ -85,7 +85,7 @@ export const programsData = {
           'Q&A Session'
         ],
         perks: 'Learn from Industry Experts, Gain Practical Knowledge, Enhance Career Opportunities',
-        regLink: 'https://forms.gle/nuE1VfapidivecvR6',
+        regLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfXb4Q-pgp4pUnSUEDZH9pLZlOdj7K-eXEpx056O5CVr6ID7Q/viewform?usp=header',
         waLink: 'https://chat.whatsapp.com/',
         isCompleted: false
       },
@@ -109,7 +109,7 @@ export const programsData = {
           'Expert Guidance & Real Stories from CA Achievers'
         ],
         perks: 'E-Certificate!, Expert Mentorship, Practical Study Tips',
-        regLink: 'https://forms.gle/CmNuQipsUAxECi57',
+        regLink: 'https://docs.google.com/forms/d/e/1FAIpQLScIlSLXsvOvG6aOrzu8MbF7iYTgMgmJi9Br4xeUtqPdvPEJSw/viewform?usp=header',
         waLink: 'https://chat.whatsapp.com/',
         isCompleted: false
       },
@@ -133,7 +133,7 @@ export const programsData = {
           'Interactive Q&A Session with Industry Experts'
         ],
         perks: 'Learn from Industry Experts, Gain Practical Knowledge, Enhance Career Opportunities',
-        regLink: 'https://forms.gle/nuE1VfapidivecvR6',
+        regLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeiRCY6363G5ioshT00TOU2bsdE5WbVRqwlcQlcwEyKg63UbA/viewform?usp=header',
         waLink: 'https://chat.whatsapp.com/',
         isCompleted: false
       },
@@ -157,7 +157,7 @@ export const programsData = {
           'Interactive Discussion & Q&A Session'
         ],
         perks: 'Register under 24 hours & get a FREE E-Certificate!, Practical Skills & Innovation Tools',
-        regLink: 'https://forms.gle/CmNuQipsUAxECi57',
+        regLink: 'https://docs.google.com/forms/d/e/1FAIpQLSd8NaH0L1geewiktpG7BVB2z71SPUP8hH8GOnmNvso4vWTOEA/viewform?usp=header',
         waLink: 'https://chat.whatsapp.com/',
         isCompleted: false
       },
@@ -182,7 +182,7 @@ export const programsData = {
           'Q&A Session'
         ],
         perks: 'Learn from Industry Experts, Gain Practical Knowledge, Enhance Career Opportunities',
-        regLink: 'https://forms.gle/nuE1VfapidivecvR6',
+        regLink: 'https://docs.google.com/forms/d/e/1FAIpQLSd1crlezG9TZ65fSn-TT48tgFVci5pGjF7emgMq7GOhfk-rsw/viewform?usp=header',
         waLink: 'https://chat.whatsapp.com/',
         isCompleted: false
       },
@@ -206,7 +206,7 @@ export const programsData = {
           'Strengthen academic and professional impact'
         ],
         perks: 'Register under 24 hours & get a FREE E-Certificate!, Practical Research Tools, Academic Impact',
-        regLink: 'https://forms.gle/CmNuQipsUAxECi57',
+        regLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfHznjrz4s-VzpZ1t43w2DsvFhSTt4Rxw4Dhz8WpjgIFz08jQ/viewform?usp=header',
         waLink: 'https://chat.whatsapp.com/',
         isCompleted: false
       }

@@ -127,13 +127,15 @@ export default function ProgramDetail() {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 items-stretch sm:items-center">
-                <button
-                  onClick={() => handleOpenRegister(null)}
+                <a
+                  href={programCategory.regLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-[#0C192E] hover:bg-[#C59B27] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 text-center"
                 >
                   <span>REGISTER NOW</span>
                   <ExternalLink className="h-4 w-4 shrink-0" />
-                </button>
+                </a>
 
                 <a
                   href={programCategory.waLink}
@@ -346,13 +348,15 @@ export default function ProgramDetail() {
                   <div className="pt-4 flex flex-col gap-2.5">
                     {!item.isCompleted ? (
                       <>
-                        <button
-                          onClick={() => handleOpenRegister(item)}
+                        <a
+                          href={item.regLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="w-full py-3 px-4 bg-[#0C192E] hover:bg-[#C59B27] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow transition-all duration-300 flex items-center justify-center gap-2"
                         >
                           REGISTER FOR THIS SESSION
                           <ExternalLink className="w-3.5 h-3.5" />
-                        </button>
+                        </a>
 
                       </>
                     ) : (
